@@ -70,6 +70,17 @@ export default function Index() {
             <p>Source: {item.source}</p>
           </li>
         ))}
+        {sortedData.map((item, index) => (
+          <li key={index}>
+            <h2>{item.title}</h2>
+            <img src={item.image_url} alt={item.title} />
+            <p>Price: {item.price}</p>
+            <p>Shipping: {item.shipping}</p>
+            <p>Returns: {item.returns}</p>
+            <a href={item.listing_url}>View Listing</a>
+            <p>Source: {item.source}</p>
+          </li>
+        ))}
       </ul>
     </div>
   );
