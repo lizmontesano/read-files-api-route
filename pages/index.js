@@ -1,5 +1,4 @@
 //useSWR allows the use of SWR inside function components
-import { filter } from "selenium-webdriver/lib/promise";
 import { useState } from 'react';
 import useSWR from "swr";
 
