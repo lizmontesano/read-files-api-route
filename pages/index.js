@@ -16,10 +16,10 @@ export default function Index() {
   //Handle the ready state and display the result contained in the data object mapped to the structure of the json file
   return (
     <div>
-      <h1>My Framework from file</h1>
+      <h1>Search results for "chrome chair"</h1>
       <ul>
-        <li>Name: {data.record.name}</li>
-        <li>Language: {data.record.language}</li>
+        <li>Title: {data.record.title}</li>
+        <li>Language: {data.record.price}</li>
       </ul>
     </div>
   );
