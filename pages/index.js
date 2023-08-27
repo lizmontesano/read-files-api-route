@@ -20,26 +20,18 @@ export default function Index() {
   //Handle the loading state
   if (!data) return <div>Loading...</div>;
   
-  //Handle the ready state and display the result contained in the data object mapped to the structure of the json file
-  const sortedData = [...data].sort((a, b) => {
-    if (sortBy === 'lowToHigh') {
-      const priceA = parseFloat(a.price.replace(/[$,]/g, ''));
-      const priceB = parseFloat(b.price.replace(/[$,]/g, ''));
-      return priceA - priceB;
-    } else if (sortBy === 'highToLow') {
-      const priceA = parseFloat(a.price.replace(/[$,]/g, ''));
-      const priceB = parseFloat(b.price.replace(/[$,]/g, ''));
-      return priceB - priceA;
-    }
-    return 0; // No sorting
-  });
-  
   const filteredData = selectedSource === 'All'
     ? data
     : data.filter(item => item.source === selectedSource);
 
-  // Combine sorting and filtering effects
-  const combinedData = filteredData;
+  let combinedData = [...filteredData]
+
+  // Combine sorting and filtering effects.. /[$,]/g
+  if (sortBy === 'lowToHigh') {
+    combinedData.sort((a, b) => parseFloat(a.price.replace(/[$,]/g, '')) - parseFloat(b.price.replace(/[$,]/g, '')));
+  } else if (sortBy === 'highToLow') {
+    combinedData.sort((a, b) => parseFloat(b.price.replace(/[$,]/g, '')) - parseFloat(a.price.replace(/[$,]/g, '')));
+  }
 
   return (
     <div>
