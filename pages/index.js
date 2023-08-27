@@ -7,15 +7,6 @@ import useSWR from "swr";
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Index() {
-  //Set up SWR to run the fetcher function when calling "/api/staticdata"
-  //There are 3 possible states: (1) loading when data is null (2) ready when the data is returned (3) error when there was an error fetching the data
-  const { data, error } = useSWR("/api/staticdata", fetcher);
-  //Handle the error state
-  if (error) return <div>Failed to load</div>;
-  //Handle the loading state
-  if (!data) return <div>Loading...</div>;
-  //Handle the ready state and display the result contained in the data object mapped to the structure of the json file
-  
   //Sorting state and logic
   const [sortBy, setSortBy] = useState('price'); // Default sorting by price
 
@@ -35,6 +26,14 @@ export default function Index() {
     ? data
     : data.filter(item => item.source === selectedSource);
 
+  //Set up SWR to run the fetcher function when calling "/api/staticdata"
+  //There are 3 possible states: (1) loading when data is null (2) ready when the data is returned (3) error when there was an error fetching the data
+  const { data, error } = useSWR("/api/staticdata", fetcher);
+  //Handle the error state
+  if (error) return <div>Failed to load</div>;
+  //Handle the loading state
+  if (!data) return <div>Loading...</div>;
+  //Handle the ready state and display the result contained in the data object mapped to the structure of the json file
   return (
     <div>
       <h1>Search results for chrome chair</h1>
