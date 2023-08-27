@@ -18,7 +18,7 @@ export default function Index() {
     <div>
       <h1>Search results</h1>
       <ul>
-        {jsonData.map((item, index) => (
+        {data.map((item, index) => (
           <li key={index}>
             <h2>{item.title}</h2>
             <img src={item.image_url} alt={item.title} />
