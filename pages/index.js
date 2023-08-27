@@ -38,6 +38,9 @@ export default function Index() {
     ? data
     : data.filter(item => item.source === selectedSource);
 
+  // Combine sorting and filtering effects
+  const combinedData = filteredData;
+
   return (
     <div>
       <h1>Search results for chrome chair</h1>
