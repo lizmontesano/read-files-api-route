@@ -1,4 +1,5 @@
 //useSWR allows the use of SWR inside function components
+import { filter } from "selenium-webdriver/lib/promise";
 import useSWR from "swr";
 
 //Write a fetcher function to wrap the native fetch function and return the result of a call to url in json format
@@ -33,7 +34,7 @@ export default function Index() {
         </select>
       </div>
       <ul>
-        {tilteredData.map((item, index) => (
+        {filteredData.map((item, index) => (
           <li key={index}>
             <h2>{item.title}</h2>
             <img src={item.image_url} alt={item.title} />
