@@ -21,7 +21,7 @@ export default function Index() {
   if (!data) return <div>Loading...</div>;
   
   //Handle the ready state and display the result contained in the data object mapped to the structure of the json file
-  const sortedData = [...data].sort((a, b) => {
+  const sortedData = [data].sort((a, b) => {
     if (sortBy === 'lowToHigh') {
       const priceA = parseFloat(a.price.replace(['$', ','], ''));
       const priceB = parseFloat(b.price.replace(['$', ','], ''));
