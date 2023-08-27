@@ -15,8 +15,21 @@ export default function Index() {
   if (!data) return <div>Loading...</div>;
   //Handle the ready state and display the result contained in the data object mapped to the structure of the json file
   
-  //Adding filter feature
+  //Sorting state and logic
+  const [sortBy, setSortBy] = useState('price'); // Default sorting by price
+
+  //Filterting state and logic
   const [selectedSource, setSelectedSource] = useState('All'); // Default: show all items
+  
+  const sortedData = [...data].sort((a, b) => {
+    if (sortBy === 'price') {
+      const priceA = parseFloat(a.price.replace(['$', ','], ''));
+      const priceB = parseFloat(b.price.replace(['$', ','], ''));
+      return priceA - priceB;
+    }
+    // Add more sorting criteria here if needed
+  });
+  
   const filteredData = selectedSource === 'All'
     ? data
     : data.filter(item => item.source === selectedSource);
@@ -24,6 +37,12 @@ export default function Index() {
   return (
     <div>
       <h1>Search results</h1>
+      <div>
+        <label>Sort by:</label>
+        <select onChange={(e) => setSortBy(e.target.value)}>
+          <option value="price">Price</option>
+        </select>
+      </div>
       <div>
         <label>Filter by source:</label>
         <select onChange={(e) => setSelectedSource(e.target.value)}>
