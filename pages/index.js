@@ -62,7 +62,7 @@ export default function Index() {
         </select>
       </div>
       <ul>
-        {sortedData.map((item, index) => (
+        {combinedData.map((item, index) => (
           <li key={index}>
             <h2>{item.title}</h2>
             <img src={item.image_url} alt={item.title} />
