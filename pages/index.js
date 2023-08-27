@@ -48,8 +48,8 @@ export default function Index() {
         <select onChange={(e) => setSelectedSource(e.target.value)}>
           <option value="All">All</option>
           <option value="eBay">eBay</option>
-          <option value="Facebook Marketplace">eBay</option>
-          <option value="Remix Market">eBay</option>
+          <option value="Facebook Marketplace">Facebook Marketplace</option>
+          <option value="Remix Market">Remix Market</option>
         </select>
       </div>
       <ul>
