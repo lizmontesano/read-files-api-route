@@ -7,7 +7,7 @@ const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Index() {
   //Sorting state and logic
-  const [sortBy, setSortBy] = useState('price'); // Default sorting by price
+  const [sortBy, setSortBy] = useState('None'); // Default sorting by price
 
   //Filterting state and logic
   const [selectedSource, setSelectedSource] = useState('All'); // Default: show all items
@@ -22,12 +22,16 @@ export default function Index() {
   
   //Handle the ready state and display the result contained in the data object mapped to the structure of the json file
   const sortedData = [...data].sort((a, b) => {
-    if (sortBy === 'price') {
+    if (sortBy === 'lowToHigh') {
       const priceA = parseFloat(a.price.replace(['$', ','], ''));
       const priceB = parseFloat(b.price.replace(['$', ','], ''));
       return priceA - priceB;
+    } else if (sortBy === 'highToLow') {
+      const priceA = parseFloat(a.price.replace(['$', ','], ''));
+      const priceB = parseFloat(b.price.replace(['$', ','], ''));
+      return priceB - priceA;
     }
-    // Add more sorting criteria here if needed
+    return 0; // No sorting
   });
   
   const filteredData = selectedSource === 'All'
@@ -38,9 +42,11 @@ export default function Index() {
     <div>
       <h1>Search results for chrome chair</h1>
       <div>
-        <label>Sort by:</label>
+        <label>Sort by price:</label>
         <select onChange={(e) => setSortBy(e.target.value)}>
-          <option value="price">Price</option>
+          <option value="none">None</option>
+          <option value="lowToHigh">Low to High</option>
+          <option value="highToLow">High to Low</option>
         </select>
       </div>
       <div>
