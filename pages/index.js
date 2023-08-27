@@ -1,5 +1,6 @@
 //useSWR allows the use of SWR inside function components
-import { filter } from "selenium-webdriver/lib/promise";
+//deleting unsed import
+//import { filter } from "selenium-webdriver/lib/promise";
 import useSWR from "swr";
 
 //Write a fetcher function to wrap the native fetch function and return the result of a call to url in json format
@@ -36,7 +37,7 @@ export default function Index() {
 
   return (
     <div>
-      <h1>Search results</h1>
+      <h1>Search results for chrome chair</h1>
       <div>
         <label>Sort by:</label>
         <select onChange={(e) => setSortBy(e.target.value)}>
