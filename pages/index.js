@@ -35,7 +35,7 @@ export default function Index() {
 
   return (
     <div>
-      <h1>Search results for 'oculus quest 2 128gb'...</h1>
+      <h1>Search results for <q>oculus quest 2 128gb</q>...</h1>
       <div>
         <label>Sort by price:</label>
         <select onChange={(e) => setSortBy(e.target.value)}>
