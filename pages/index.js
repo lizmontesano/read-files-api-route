@@ -1,6 +1,7 @@
 //useSWR allows the use of SWR inside function components
 import { useState } from 'react';
 import useSWR from "swr";
+import 'pages/index.css'; // Import your custom CSS file for styling
 
 //Write a fetcher function to wrap the native fetch function and return the result of a call to url in json format
 const fetcher = (url) => fetch(url).then((res) => res.json());
@@ -62,7 +63,7 @@ export default function Index() {
             <p>Shipping: {item.delivery}</p>
             <p>Returns: {item.returns}</p>
             <p>Source: {item.source}</p>
-            <a href={item.listing_url}>View Listing</a>
+            <a className="listing-link" href={item.listing_url}>View Listing</a>
           </li>
         ))}
       </ul>
