@@ -36,6 +36,14 @@ export default function Index() {
 
   return (
     <div>
+      <style>
+        {`
+          .listing-link {
+            color: blue;
+            text-decoration: underline;
+          }
+        `}
+      </style>
       <h1>Search results for <q>oculus quest 2 128gb</q>...</h1>
       <div>
         <label>Sort by price:</label>
