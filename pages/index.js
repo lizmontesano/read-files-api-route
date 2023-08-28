@@ -61,7 +61,7 @@ export default function Index() {
             <p>Price: {item.price}</p>
             <p>Shipping: {item.delivery}</p>
             <p>Returns: {item.returns}</p>
-            <a style="color: blue" href={item.listing_url}>View Listing</a>
+            <a href={item.listing_url}>View Listing</a>
             <p>Source: {item.source}</p>
           </li>
         ))}
