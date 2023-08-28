@@ -62,7 +62,7 @@ export default function Index() {
             <p>Shipping: {item.delivery}</p>
             <p>Returns: {item.returns}</p>
             <p>Source: {item.source}</p>
-            <a style="color: blue;" href={item.listing_url}>View Listing</a>
+            <a href={item.listing_url}>View Listing</a>
           </li>
         ))}
       </ul>
