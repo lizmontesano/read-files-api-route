@@ -1,6 +1,7 @@
 //useSWR allows the use of SWR inside function components
 import { useState } from 'react';
 import useSWR from "swr";
+import { Analytics } from '@vercel/analytics/react';
 //import '.pages/index.css'; // Import your custom CSS file for styling
 
 //Write a fetcher function to wrap the native fetch function and return the result of a call to url in json format
@@ -75,6 +76,7 @@ export default function Index() {
           </li>
         ))}
       </ul>
+      <Analytics />
     </div>
   );
 }
