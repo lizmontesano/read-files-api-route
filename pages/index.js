@@ -6,42 +6,32 @@ import useSWR from "swr";
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Index() {
-  //Sorting state and logic
+
+  //Selecting data, sorting by price, filtering by source
   const [sortBy, setSortBy] = useState('None'); // Default sorting by price
-
-  //Filterting state and logic
   const [selectedSource, setSelectedSource] = useState('All'); // Default: show all items
-
-  const [selectedData, setSelectedData] = useState('chromechairdata'); // Default: use data1.json
-
-  const [showResults, setShowResults] = useState(true);
+  const [selectedData, setSelectedData] = useState('oculusdata'); // Default: use data1.json
 
   //Set up SWR to run the fetcher function when calling "/api/staticdata"
   //There are 3 possible states: (1) loading when data is null (2) ready when the data is returned (3) error when there was an error fetching the data
-  const { data, error } = useSWR(`/api/staticdata?selectedData=${selectedData}`, fetcher);
-  console.log(data)
-  
+  const { data, error } = useSWR(`/api/staticdata?selectedData=${selectedData}`, fetcher);  
   //Handle the error state
   if (error) return <div>Failed to load</div>;
   //Handle the loading state
   if (!data) return <div>Loading...</div>;
   
+  //Filter and sort functionality
   const filteredData = selectedSource === 'All'
     ? data
     : data.filter(item => item.source === selectedSource);
 
   let combinedData = [...filteredData]
 
-  // Combine sorting and filtering effects.. /[$,]/g
   if (sortBy === 'lowToHigh') {
     combinedData.sort((a, b) => parseFloat(a.price.replace(/[$,]/g, '')) - parseFloat(b.price.replace(/[$,]/g, '')));
   } else if (sortBy === 'highToLow') {
     combinedData.sort((a, b) => parseFloat(b.price.replace(/[$,]/g, '')) - parseFloat(a.price.replace(/[$,]/g, '')));
   }
-
-  const handleSearch = () => {
-    setShowResults(true);
-  };
 
   return (    
     <div>
@@ -61,7 +51,6 @@ export default function Index() {
           <option value="chromechairdata">Chrome Chair</option>
         </select>
       </div>
-      {showResults && (
       <div>
         <h2>Showing search results...</h2>
         <div>
@@ -95,7 +84,6 @@ export default function Index() {
         ))}
       </ul>
       </div>
-      )};
     </div>
   );
 }
