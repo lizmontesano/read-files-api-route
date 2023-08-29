@@ -10,7 +10,7 @@ export default function Index() {
   //Selecting data, sorting by price, filtering by source
   const [sortBy, setSortBy] = useState('None'); // Default sorting by price
   const [selectedSource, setSelectedSource] = useState('All'); // Default: show all items
-  const [selectedData, setSelectedData] = useState('oculusdata'); // Default: use data1.json
+  const [selectedData, setSelectedData] = useState('defaultdata'); // Default: use data1.json
 
   //Set up SWR to run the fetcher function when calling "/api/staticdata"
   //There are 3 possible states: (1) loading when data is null (2) ready when the data is returned (3) error when there was an error fetching the data
@@ -47,6 +47,7 @@ export default function Index() {
       <div>
         <label>Select Data:</label>
         <select onChange={(e) => setSelectedSource(e.target.value)}>
+          <option value="defaultdata"> ... </option>
           <option value="oculusdata">Oculus</option>
           <option value="chromechairdata">Chrome Chair</option>
         </select>
