@@ -37,7 +37,8 @@ export default function Index() {
           <label>Select Data:</label>
           <select onChange={(e) => setSelectedData(e.target.value)}>
             <option value="none">Select</option>
-            <option value="oculusdata">Oculus</option>
+            <option value="arcofloorlampdata">Arco Floor Lamp</option>
+            <option value="postmoderndiningchairsdata">Post Modern Dining Chairs</option>
             <option value="chromechairdata">Chrome Chair</option>
           </select>
         </div>
@@ -68,13 +69,13 @@ export default function Index() {
           }
         `}
       </style>
-      <h1>What are you looking fo?</h1>
+      <h1>What are you looking for?</h1>
       <div>
         <label>Select Data:</label>
         <select onChange={(e) => setSelectedData(e.target.value)}>
           <option value="none">Select</option>
           <option value="arcofloorlampdata">Arco Floor Lamp</option>
-          <option value="oculusdata">Oculus</option>
+          <option value="postmoderndiningchairsdata">Post Modern Dining Chairs</option>
           <option value="chromechairdata">Chrome Chair</option>
         </select>
       </div>
