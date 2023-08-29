@@ -18,8 +18,8 @@ export default function Index() {
 
   //Set up SWR to run the fetcher function when calling "/api/staticdata"
   //There are 3 possible states: (1) loading when data is null (2) ready when the data is returned (3) error when there was an error fetching the data
-  console.log("useSWR is running");
   const { data, error } = useSWR(`/api/staticdata?selectedData=${selectedData}`, fetcher);
+  console.log(data)
   
   //Handle the error state
   if (error) return <div>Failed to load</div>;
