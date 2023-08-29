@@ -48,7 +48,7 @@ export default function Index() {
           }
         `}
       </style>
-      <h1>What are you looking for?</h1>
+      <h1>What are you looking for ?</h1>
       <div>
         <label>Select Data:</label>
         <select onChange={(e) => setSelectedData(e.target.value)}>
