@@ -20,8 +20,30 @@ export default function Index() {
   );
   //Handle the error state
   if (error) return <div>Failed to load</div>;
-  //Handle the loading state
-  if (!data) return <div>Loading...</div>;
+  // Check if data is not available yet or if no data source is selected
+  if (!data || selectedData === 'none') {
+    return (
+      <div>
+        <style>
+          {`
+            .listing-link {
+              color: blue;
+              text-decoration: underline;
+            }
+          `}
+        </style>
+        <h1>What are you looking fo?</h1>
+        <div>
+          <label>Select Data:</label>
+          <select onChange={(e) => setSelectedData(e.target.value)}>
+            <option value="none">Select</option>
+            <option value="oculusdata">Oculus</option>
+            <option value="chromechairdata">Chrome Chair</option>
+          </select>
+        </div>
+      </div>
+    );
+  }
   
   //Filter and sort functionality
   const filteredData = selectedSource === 'All'
@@ -36,8 +58,6 @@ export default function Index() {
     combinedData.sort((a, b) => parseFloat(b.price.replace(/[$,]/g, '')) - parseFloat(a.price.replace(/[$,]/g, '')));
   }
 
-  const isResultsVisible = selectedData !== 'none'; // Check if a data source is selected
-
   return (    
     <div>
       <style>
@@ -48,7 +68,7 @@ export default function Index() {
           }
         `}
       </style>
-      <h1>What are you looking for ?</h1>
+      <h1>What are you looking fo?</h1>
       <div>
         <label>Select Data:</label>
         <select onChange={(e) => setSelectedData(e.target.value)}>
@@ -57,7 +77,6 @@ export default function Index() {
           <option value="chromechairdata">Chrome Chair</option>
         </select>
       </div>
-      {isResultsVisible && (
       <div>
         <h2>Showing search results...</h2>
         <div>
@@ -91,7 +110,6 @@ export default function Index() {
         ))}
       </ul>
       </div>
-      )}
     </div>
   );
 }
