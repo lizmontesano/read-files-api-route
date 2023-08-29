@@ -17,12 +17,15 @@ import { promises as fs } from "fs";
 export default async function handler(req, res) {
   // Get the selected data value from the request query
   const selectedData = req.query.selectedData; // Make sure to use the correct query parameter name
+  console.log("selectedData is " + selectedData);
 
   // Find the absolute path of the json directory
   const jsonDirectory = path.join(process.cwd(), "json");
+  console.log("jsonDirectory is " + jsonDirectory);
 
   // Construct the path to the selected JSON file
   const jsonFilePath = path.join(jsonDirectory, `${selectedData}.json`);
+  console.log("jsonFilePath is" + jsonFilePath);
 
   try {
     // Read the selected JSON data file
