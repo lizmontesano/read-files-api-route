@@ -14,7 +14,7 @@ export default function Index() {
 
   const [selectedData, setSelectedData] = useState('chromechairdata'); // Default: use data1.json
 
-  const [showResults, setShowResults] = useState(false);
+  const [showResults, setShowResults] = useState(true);
 
   //Set up SWR to run the fetcher function when calling "/api/staticdata"
   //There are 3 possible states: (1) loading when data is null (2) ready when the data is returned (3) error when there was an error fetching the data
