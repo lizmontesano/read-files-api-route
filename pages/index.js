@@ -56,8 +56,8 @@ export default function Index() {
       <div>
         <label>Select Data:</label>
         <select onChange={(e) => setSelectedSource(e.target.value)}>
-          <option value="oculusdata.json">Oculus</option>
-          <option value="chromechairdata.json">Chrome Chair</option>
+          <option value="oculusdata">Oculus</option>
+          <option value="chromechairdata">Chrome Chair</option>
         </select>
       </div>
       {showResults && (
