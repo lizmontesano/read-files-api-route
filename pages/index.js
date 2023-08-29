@@ -10,15 +10,18 @@ export default function Index() {
   //Selecting data, sorting by price, filtering by source
   const [sortBy, setSortBy] = useState('None'); // Default sorting by price
   const [selectedSource, setSelectedSource] = useState('All'); // Default: show all items
-  const [selectedData, setSelectedData] = useState('oculusdata'); // Default: use data1.json
+  const [selectedData, setSelectedData] = useState('none'); // Default: use data1.json
 
   //Set up SWR to run the fetcher function when calling "/api/staticdata"
   //There are 3 possible states: (1) loading when data is null (2) ready when the data is returned (3) error when there was an error fetching the data
-  const { data, error } = useSWR(`/api/staticdata?selectedData=${selectedData}`, fetcher);
+  const { data, error } = useSWR(
+    selectedData !== 'none' ? `/api/staticdata?selectedData=${selectedData}` : null,
+    fetcher
+  );
   //Handle the error state
   if (error) return <div>Failed to load</div>;
   //Handle the loading state
-  if (!data && selectedData !== 'none') return <div>Loading...</div>;
+  if (!data) return <div>Loading...</div>;
   
   //Filter and sort functionality
   const filteredData = selectedSource === 'All'
