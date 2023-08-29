@@ -73,6 +73,7 @@ export default function Index() {
         <label>Select Data:</label>
         <select onChange={(e) => setSelectedData(e.target.value)}>
           <option value="none">Select</option>
+          <option value="arcofloorlampdata">Arco Floor Lamp</option>
           <option value="oculusdata">Oculus</option>
           <option value="chromechairdata">Chrome Chair</option>
         </select>
