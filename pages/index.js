@@ -16,13 +16,13 @@ export default function Index() {
   //There are 3 possible states: (1) loading when data is null (2) ready when the data is returned (3) error when there was an error fetching the data
   const { data, error } = useSWR(
     selectedData !== 'none' ? `/api/staticdata?selectedData=${selectedData}` : null,
-  fetcher
+    fetcher
   );  
   console.log(data);
   //Handle the error state
   if (error) return <div>Failed to load</div>;
   //Handle the loading state
-  if (!data) return <div>Loading...</div>;
+  if (!data && selectedData !== 'none') return <div>Loading...</div>;
   
   //Filter and sort functionality
   const filteredData = selectedSource === 'All'
