@@ -107,7 +107,7 @@ export default function Index() {
           <select onChange={(e) => setSelectedDelivery(e.target.value)}>
             <option value="All">All</option>
             <option value="shipping">Shipping</option>
-            <option value="pickup">Local Pick Up</option>
+            <option value="local">Local Pick Up</option>
           </select>
       </div>
       <ul>
