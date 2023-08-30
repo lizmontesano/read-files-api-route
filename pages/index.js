@@ -64,6 +64,33 @@ export default function Index() {
     combinedData.sort((a, b) => parseFloat(b.price.replace(/[$,]/g, '')) - parseFloat(a.price.replace(/[$,]/g, '')));
   }
 
+  function handleNextPhoto(index) {
+    // Assuming combinedData is your array of listings
+    const listing = combinedData[index];
+
+    // Increment the photo index
+    listing.photo_index = (listing.photo_index) % listing.num_photos;
+
+    // Find the image element within the list item and update the src attribute
+    const listItem = document.querySelectorAll('li')[index];
+    const imageElement = listItem.querySelector('img');
+    imageElement.src = listing[`photo_url${listing.photo_index}`];
+
+    // You might also want to update the alt attribute of the image
+    imageElement.alt = `Photo ${listing.photo_index + 1}`;
+
+    // If there's no next photo available, hide the "Next" button
+    const nextButton = listItem.querySelector('button');
+    if (!listing[`photo_url${listing.photo_index + 1}`]) {
+        nextButton.style.display = 'none';
+    }
+
+    // Update any other elements you want to change, such as the photo index display
+    // For example, you can update the displayed index: "Photo X of Y"
+    const photoIndexDisplay = listItem.querySelector('.photo-index-display');
+    photoIndexDisplay.textContent = `Photo ${listing.photo_index + 1} of ${listing.num_photos}`;
+}
+
   return (    
     <div>
       <style>
