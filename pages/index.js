@@ -41,6 +41,7 @@ export default function Index() {
             <option value="arcofloorlampdata">Arco Floor Lamp</option>
             <option value="postmoderndiningchairsdata">Post Modern Dining Chairs</option>
             <option value="chromechairdata">Chrome Chair</option>
+            <option value="scroll">Under Construction</option>
           </select>
         </div>
       </div>
@@ -81,6 +82,7 @@ export default function Index() {
           <option value="arcofloorlampdata">Arco Floor Lamp</option>
           <option value="postmoderndiningchairsdata">Post Modern Dining Chairs</option>
           <option value="chromechairdata">Chrome Chair</option>
+          <option value="scroll">Under Construction</option>
         </select>
       </div>
       <div>
@@ -114,7 +116,11 @@ export default function Index() {
         {combinedData.map((item, index) => (
           <li key={index}>
             <h2>{item.title}</h2>
-            <img src={item.image_url} alt={item.title} />
+            <img src={item[`photo_url${item.photo_index}`]} alt={`Photo ${item.photo_index}`} />
+              {/* Show the "Next" button if there's a next photo available */}
+              {item[`photo_url${item.photo_index + 1}`] && (
+              <button onClick={() => handleNextPhoto(index)}>Next</button>
+              )}
             <p>Price: {item.price}</p>
             <p>Shipping: {item.delivery}</p>
             <p>Returns: {item.returns}</p>
