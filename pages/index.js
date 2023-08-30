@@ -32,9 +32,9 @@ export default function Index() {
             }
           `}
         </style>
-        <h1>What are you looking fo?</h1>
+        <h1>What are you looking for?</h1>
         <div>
-          <label>Select Data:</label>
+          <label>Search for:</label>
           <select onChange={(e) => setSelectedData(e.target.value)}>
             <option value="none">Select</option>
             <option value="arcofloorlampdata">Arco Floor Lamp</option>
@@ -71,7 +71,7 @@ export default function Index() {
       </style>
       <h1>What are you looking for?</h1>
       <div>
-        <label>Select Data:</label>
+        <label>Search for:</label>
         <select onChange={(e) => setSelectedData(e.target.value)}>
           <option value="none">Select</option>
           <option value="arcofloorlampdata">Arco Floor Lamp</option>
@@ -80,7 +80,7 @@ export default function Index() {
         </select>
       </div>
       <div>
-        <h2>Showing search results...</h2>
+        <h2>Search results...</h2>
         <div>
         <label>Sort by price:</label>
           <select onChange={(e) => setSortBy(e.target.value)}>
@@ -107,7 +107,7 @@ export default function Index() {
             <p>Shipping: {item.delivery}</p>
             <p>Returns: {item.returns}</p>
             <p>Source: {item.source}</p>
-            <a className="listing-link" href={item.listing_url}>View Listing</a>
+            <a className="listing-link" href={item.listing_url} target="_blank" rel="noopener noreferrer">View Listing</a>
           </li>
         ))}
       </ul>
