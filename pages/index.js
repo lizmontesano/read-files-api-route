@@ -82,9 +82,11 @@ export default function Index() {
     const imageElement = listItem.querySelector('img');
     console.log("image element is..")
     console.log(imageElement)
+    console.log("new image link is..")
+    console.log(listing[`photo_url${listing.photo_index}`])
     imageElement.src = listing[`photo_url${listing.photo_index}`];
-    console.log("image element is..")
-    console.log(imageElement)
+    console.log("image element is src..")
+    console.log(imageElement.src)
 
     // You might also want to update the alt attribute of the image
     imageElement.alt = `Photo ${listing.photo_index + 1}`;
