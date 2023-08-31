@@ -92,10 +92,10 @@ export default function Index() {
     imageElement.alt = `Photo ${listing.photo_index + 1}`;
 
     // If there's no next photo available, hide the "Next" button
-    const nextButton = listItem.querySelector('button');
-    if (!listing[`photo_url${listing.photo_index + 1}`]) {
-        nextButton.style.display = 'none';
-    }
+    //const nextButton = listItem.querySelector('button');
+    //if (!listing[`photo_url${listing.photo_index + 1}`]) {
+    //    nextButton.style.display = 'none';
+    //}
 
     // Update any other elements you want to change, such as the photo index display
     // For example, you can update the displayed index: "Photo X of Y"
