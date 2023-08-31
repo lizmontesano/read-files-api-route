@@ -71,7 +71,7 @@ export default function Index() {
     console.log(listing)
 
     // Increment the photo index
-    listing.photo_index = (listing.photo_index) % listing.num_photos;
+    listing.photo_index = (listing.photo_index + 1) % listing.num_photos;
     console.log("listing.photo_index is..")
     console.log(listing.photo_index)
 
