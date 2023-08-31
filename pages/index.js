@@ -67,35 +67,17 @@ export default function Index() {
   function handleNextPhoto(index) {
     // Assuming combinedData is your array of listings
     const listing = combinedData[index];
-    console.log("listing is..")
-    console.log(listing)
 
     // Increment the photo index
     listing.photo_index = (listing.photo_index + 1) % listing.num_photos;
-    console.log("listing.photo_index is..")
-    console.log(listing.photo_index)
 
     // Find the image element within the list item and update the src attribute
     const listItem = document.querySelectorAll('li')[index];
-    console.log("list item is..")
-    console.log(listItem)
     const imageElement = listItem.querySelector('img');
-    console.log("image element is..")
-    console.log(imageElement)
-    console.log("new image link is..")
-    console.log(listing[`photo_url${listing.photo_index}`])
     imageElement.src = listing[`photo_url${listing.photo_index}`];
-    console.log("image element is src..")
-    console.log(imageElement.src)
 
     // You might also want to update the alt attribute of the image
     imageElement.alt = `Photo ${listing.photo_index + 1}`;
-
-    // If there's no next photo available, hide the "Next" button
-    //const nextButton = listItem.querySelector('button');
-    //if (!listing[`photo_url${listing.photo_index + 1}`]) {
-    //    nextButton.style.display = 'none';
-    //}
 
     // Update any other elements you want to change, such as the photo index display
     // For example, you can update the displayed index: "Photo X of Y"
@@ -155,7 +137,11 @@ export default function Index() {
         {combinedData.map((item, index) => (
           <li key={index}>
             <h2>{item.title}</h2>
-            <img src={item[`photo_url${item.photo_index}`]} alt={`Photo ${item.photo_index}`} />
+            <img
+              src={item[`photo_url${item.photo_index}`]}
+              alt={`Photo ${item.photo_index}`}
+              style={{ width: '50%', height: 'auto' }} // Adjust the width as needed
+            />
               {/* Show the "Next" button if there's a next photo available */}
               {item[`photo_url${item.photo_index + 1}`] && (
               <button onClick={() => handleNextPhoto(index)}>Next</button>
