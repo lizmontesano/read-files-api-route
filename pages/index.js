@@ -89,7 +89,7 @@ export default function Index() {
     // For example, you can update the displayed index: "Photo X of Y"
     //const photoIndexDisplay = listItem.querySelector('.photo-index-display');
     //photoIndexDisplay.textContent = `Photo ${listing.photo_index + 1} of ${listing.num_photos}`;
-}
+  }
 
   return (    
     <div>
