@@ -144,7 +144,7 @@ export default function Index() {
             <img
               src={item[`photo_url${item.photo_index}`]}
               alt={`Photo ${item.photo_index}`}
-              style={{ width: '25%', height: 'auto' }} // Adjust the width as needed
+              style={{ width: '35%', height: 'auto' }} // Adjust the width as needed
             />
               {/* Show the "Next" button if there's a next photo available */}
               {item[`photo_url${item.photo_index + 1}`] && (
