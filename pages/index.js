@@ -38,10 +38,12 @@ export default function Index() {
           <label>Search for:</label>
           <select onChange={(e) => setSelectedData(e.target.value)}>
             <option value="none">Select</option>
+            {/* 
             <option value="arcofloorlampdata">Arco Floor Lamp</option>
             <option value="postmoderndiningchairsdata">Post Modern Dining Chairs</option>
             <option value="chromechairdata">Chrome Chair</option>
-            <option value="scroll">Under Construction</option>
+            */}
+            <option value="scroll">Arco Floor Lamp</option>
           </select>
         </div>
       </div>
@@ -100,10 +102,12 @@ export default function Index() {
         <label>Search for:</label>
         <select onChange={(e) => setSelectedData(e.target.value)}>
           <option value="none">Select</option>
-          <option value="arcofloorlampdata">Arco Floor Lamp</option>
-          <option value="postmoderndiningchairsdata">Post Modern Dining Chairs</option>
-          <option value="chromechairdata">Chrome Chair</option>
-          <option value="scroll">Under Construction</option>
+          {/* 
+            <option value="arcofloorlampdata">Arco Floor Lamp</option>
+            <option value="postmoderndiningchairsdata">Post Modern Dining Chairs</option>
+            <option value="chromechairdata">Chrome Chair</option>
+        */}
+          <option value="scroll">Arco Floor Lamp</option>
         </select>
       </div>
       <div>
