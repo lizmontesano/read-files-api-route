@@ -146,10 +146,12 @@ export default function Index() {
               alt={`Photo ${item.photo_index}`}
               style={{ width: '35%', height: 'auto' }} // Adjust the width as needed
             />
+            <div>
               {/* Show the "Next" button if there's a next photo available */}
               {item[`photo_url${item.photo_index + 1}`] && (
               <button onClick={() => handleNextPhoto(index)}>Next</button>
               )}
+            </div>
             <p>Price: {item.price}</p>
             <p>Shipping: {item.delivery}</p>
             <p>Returns: {item.returns}</p>
