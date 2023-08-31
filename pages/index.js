@@ -67,24 +67,24 @@ export default function Index() {
   function handleNextPhoto(index) {
     // Assuming combinedData is your array of listings
     const listing = combinedData[index];
-    print("listing is..")
-    print(listing)
+    console.log("listing is..")
+    console.log(listing)
 
     // Increment the photo index
     listing.photo_index = (listing.photo_index) % listing.num_photos;
-    print("listing.photo_index is..")
-    print(listing.photo_index)
+    console.log("listing.photo_index is..")
+    console.log(listing.photo_index)
 
     // Find the image element within the list item and update the src attribute
     const listItem = document.querySelectorAll('li')[index];
-    print("list item is..")
-    print(listItem)
+    console.log("list item is..")
+    console.log(listItem)
     const imageElement = listItem.querySelector('img');
-    print("image element is..")
-    print(imageElement)
+    console.log("image element is..")
+    console.log(imageElement)
     imageElement.src = listing[`photo_url${listing.photo_index}`];
-    print("image element is..")
-    print(imageElement)
+    console.log("image element is..")
+    console.log(imageElement)
 
     // You might also want to update the alt attribute of the image
     imageElement.alt = `Photo ${listing.photo_index + 1}`;
