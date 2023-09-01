@@ -118,16 +118,17 @@ export default function Index() {
             <option value="All">All</option>
             <option value="eBay">eBay</option>
             <option value="Facebook Marketplace">Facebook Marketplace</option>
-            <option value="Remix Market">Remix Market</option>
           </select>
       </div>
       <div>
+        {/* Show the "Next" button if there's a next photo available
         <label>Filter by delivery options:</label>
           <select onChange={(e) => setSelectedDelivery(e.target.value)}>
             <option value="All">All</option>
             <option value="shipping">Shipping</option>
             <option value="local">Local Pick Up</option>
           </select>
+        */}
       </div>
       <ul>
         {combinedData.map((item, index) => (
