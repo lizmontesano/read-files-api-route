@@ -142,7 +142,8 @@ export default function Index() {
           <li key={index}>
             <h2>{item.title}</h2>
             <img
-              src={item.photo_url0}
+              src={item[`photo_url${item.photo_index}`]}
+              alt={`Photo ${item.photo_index}`}
               style={{ width: '35%', height: 'auto' }} // Adjust the width as needed
             />
             <div>
