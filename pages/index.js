@@ -39,7 +39,7 @@ export default function Index() {
           <select onChange={(e) => setSelectedData(e.target.value)}>
             <option value="none">Select</option>
             <option value="sept1_arco">Arco Floor Lamp</option>
-            <option value="sept1_postmoderndiningchair">Arco Floor Lamp</option>
+            <option value="sept1_postmoderndiningchair">Post Modern Dining Chair</option>
           </select>
         </div>
       </div>
@@ -99,7 +99,7 @@ export default function Index() {
         <select onChange={(e) => setSelectedData(e.target.value)}>
           <option value="none">Select</option>
           <option value="sept1_arco">Arco Floor Lamp</option>
-          <option value="sept1_postmoderndiningchair">Arco Floor Lamp</option>
+          <option value="sept1_postmoderndiningchair">Post Modern Dining Chair</option>
         </select>
       </div>
       <div>
