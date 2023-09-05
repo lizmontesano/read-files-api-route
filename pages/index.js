@@ -103,8 +103,8 @@ export default function Index() {
         </select>
       </div>
       <div>
-        <h2>Listings:</h2>
-        <h3>The listings shown are within a 50 mile radius of NYC. If you make a purchase I can coordinate NYC deliveries and quality checks!</h3>
+        <h2>Search Results:</h2>
+        <h3>The results shown are within a 50 mile radius of NYC. If you make a purchase I can coordinate NYC deliveries and quality checks!</h3>
         <div>
         <label>Sort by price:</label>
           <select onChange={(e) => setSortBy(e.target.value)}>
