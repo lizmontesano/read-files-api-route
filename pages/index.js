@@ -86,13 +86,15 @@ export default function Index() {
               text-decoration: underline;
             }
 
+            /* Style for the photo container */
             .photo-container {
-              position: relative;
+              position: relative; /* Ensure relative positioning */
               display: inline-block; /* Prevents the container from taking full width */
             }
 
+            /* Style for the right arrow button */
             .next-button {
-              background-color: grey; /* Change to your desired background color */
+              background-color: #007bff; /* Change to your desired background color */
               color: #fff; /* Change to your desired text color */
               border: none;
               border-radius: 50%;
@@ -101,9 +103,9 @@ export default function Index() {
               font-size: 24px; /* Adjust the font size as needed */
               cursor: pointer;
               position: absolute;
-              top: 50%; /* Vertically center the button */
-              right: 0; /* Position the button at the right edge */
-              transform: translate(50%, -50%); /* Center the button vertically */
+              top: 50%; /* Vertically center the button within the container */
+              right: 0; /* Position the button at the right edge of the container */
+              transform: translate(0, -50%); /* Center the button vertically within the container */
             }
 
             .next-button:hover {
@@ -164,9 +166,8 @@ export default function Index() {
               <img
                 src={item[`photo_url${item.photo_index}`]}
                 alt={`Photo ${item.photo_index}`}
-                style={{ width: '35%', height: 'auto', position: 'relative' }} // Adjust the width as needed
+                style={{ width: '35%', height: 'auto'}} // Adjust the width as needed
               />
-              <div className="next-button-container"></div>
               {item[`photo_url${item.photo_index + 1}`] && (
               <button className="next-button" onClick={() => handleNextPhoto(index)}>&rarr;</button>
               )}
