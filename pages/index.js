@@ -104,8 +104,8 @@ export default function Index() {
           cursor: pointer;
           position: absolute;
           top: 50%;
-          right: -80px; /* Adjust the negative margin to overlap the image */
-          transform: translateY(-90%);
+          right: -2000px; /* Adjust the negative margin to overlap the image */
+          transform: translateY(-50%);
         }
 
         .next-button:hover {
