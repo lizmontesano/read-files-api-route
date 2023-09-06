@@ -88,13 +88,13 @@ export default function Index() {
 
         /* Style for the photo container */
         .photo-container {
-          position: relative;
-          display: inline-block;
+          display: flex;
+          align-items: center; /* Vertically center-align the button */
         }
 
         /* Style for the right arrow button */
         .next-button {
-          background-color: grey; /* Change to your desired background color */
+          background-color: #007bff; /* Change to your desired background color */
           color: #fff; /* Change to your desired text color */
           border: none;
           border-radius: 50%;
@@ -102,10 +102,7 @@ export default function Index() {
           height: 40px;
           font-size: 24px; /* Adjust the font size as needed */
           cursor: pointer;
-          position: absolute;
-          top: 50%;
-          right: 0px; /* Adjust the negative margin to overlap the image */
-          transform: translateY(-50%);
+          margin-left: 10px; /* Add some space between the image and button */
         }
 
         .next-button:hover {
@@ -156,7 +153,7 @@ export default function Index() {
               <img
                 src={item[`photo_url${item.photo_index}`]}
                 alt={`Photo ${item.photo_index}`}
-                style={{ width: '35%', height: 'auto', position: 'relative'}} // Adjust the width as needed
+                style={{ width: '35%', height: 'auto' }} // Adjust the width as needed
               />
               {item[`photo_url${item.photo_index + 1}`] && (
               <button className="next-button" onClick={() => handleNextPhoto(index)}>&rarr;</button>
