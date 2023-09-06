@@ -39,6 +39,7 @@ export default function Index() {
           <select onChange={(e) => setSelectedData(e.target.value)}>
             <option value="none">Select</option>
             <option value="sept6_noguchi">Noguchi Paper Lamp</option>
+            <option value="sept6_spaceagechair">Noguchi Paper Lamp</option>
           </select>
         </div>
         <h3>The results shown are located within 50 miles of NYC and were posted in the last 7 days.</h3>
@@ -100,6 +101,7 @@ export default function Index() {
         <select onChange={(e) => setSelectedData(e.target.value)}>
           <option value="none">Select</option>
           <option value="sept6_noguchi">Noguchi Paper Lamp</option>
+          <option value="sept6_spaceagechair">Noguchi Paper Lamp</option>
         </select>
       </div>
       <h3>The results shown are located within 50 miles of NYC and were posted in the last 7 days.</h3>
