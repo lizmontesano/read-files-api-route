@@ -102,7 +102,7 @@ export default function Index() {
           height: 40px;
           font-size: 24px; /* Adjust the font size as needed */
           cursor: pointer;
-          margin-left: -10px; /* Add some space between the image and button */
+          margin-left: -30px; /* Add some space between the image and button */
         }
 
         .next-button:hover {
