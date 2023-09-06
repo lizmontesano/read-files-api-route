@@ -57,6 +57,14 @@ export default function Index() {
               flex-direction: column; /* Center the image and button vertically */
             }
             
+            .next-button-container {
+              position: relative;
+              flex: 1; /* Allow the container to take up available space */
+              display: flex;
+              align-items: center;
+              justify-content: flex-end; /* Position the button to the right */
+            }
+            
           `}
         </style>
         <h1>What are you looking for?</h1>
@@ -170,6 +178,7 @@ export default function Index() {
                 alt={`Photo ${item.photo_index}`}
                 style={{ width: '35%', height: 'auto' }} // Adjust the width as needed
               />
+              <div className="next-button-container"></div>
               {item[`photo_url${item.photo_index + 1}`] && (
               <button className="next-button" onClick={() => handleNextPhoto(index)}>&rarr;</button>
               )}
