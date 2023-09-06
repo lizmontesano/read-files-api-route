@@ -41,7 +41,8 @@ export default function Index() {
             <option value="sept6_noguchi">Noguchi Paper Lamp</option>
           </select>
         </div>
-        <h3>The results shown are in 50 mile radius of NYC and were posted in the last 7 days. If you make a purchase, then I will coordinate NYC deliveries and quality checks!</h3>
+        <h3>The results shown are located within 50 miles of NYC and were posted in the last 7 days.</h3>
+        <h3>If you make a purchase, then I will coordinate NYC deliveries and quality checks!</h3>
       </div>
     );
   }
@@ -101,9 +102,10 @@ export default function Index() {
           <option value="sept6_noguchi">Noguchi Paper Lamp</option>
         </select>
       </div>
-      <h3>The results shown are in 50 mile radius of NYC and were posted in the last 7 days. If you make a purchase, then I will coordinate NYC deliveries and quality checks!</h3>
+      <h3>The results shown are located within 50 miles of NYC and were posted in the last 7 days.</h3>
+      <h3>If you make a purchase, then I will coordinate NYC deliveries and quality checks!</h3>
       <div>
-        <h2>Search Results:</h2>
+        <h3>Results:</h3>
         <div>
         <label>Sort by price:</label>
           <select onChange={(e) => setSortBy(e.target.value)}>
