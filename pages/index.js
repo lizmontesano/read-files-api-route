@@ -31,6 +31,32 @@ export default function Index() {
               color: blue;
               text-decoration: underline;
             }
+
+            .next-button {
+              background-color: #007bff; /* Change to your desired background color */
+              color: #fff; /* Change to your desired text color */
+              border: none;
+              border-radius: 50%;
+              width: 40px; /* Adjust the width and height as needed */
+              height: 40px;
+              font-size: 24px; /* Adjust the font size as needed */
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+            }
+
+            .next-button:hover {
+              background-color: #0056b3; /* Change to your desired hover background color */
+            }
+
+            .photo-container {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column; /* Center the image and button vertically */
+            }
+            
           `}
         </style>
         <h1>What are you looking for?</h1>
@@ -138,15 +164,14 @@ export default function Index() {
         {combinedData.map((item, index) => (
           <li key={index}>
             <h2>{item.title}</h2>
-            <img
-              src={item[`photo_url${item.photo_index}`]}
-              alt={`Photo ${item.photo_index}`}
-              style={{ width: '35%', height: 'auto' }} // Adjust the width as needed
-            />
-            <div>
-              {/* Show the "Next" button if there's a next photo available */}
+            <div className="photo-container">
+              <img
+                src={item[`photo_url${item.photo_index}`]}
+                alt={`Photo ${item.photo_index}`}
+                style={{ width: '35%', height: 'auto' }} // Adjust the width as needed
+              />
               {item[`photo_url${item.photo_index + 1}`] && (
-              <button onClick={() => handleNextPhoto(index)}>Next</button>
+              <button className="next-button" onClick={() => handleNextPhoto(index)}>&rarr;</button>
               )}
             </div>
             <p>Price: {item.price}</p>
