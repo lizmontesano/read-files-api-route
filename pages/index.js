@@ -25,48 +25,6 @@ export default function Index() {
   if (!data || selectedData === 'none') {
     return (
       <div>
-        <style>
-          {`
-            .listing-link {
-              color: blue;
-              text-decoration: underline;
-            }
-
-            .next-button {
-              background-color: #007bff; /* Change to your desired background color */
-              color: #fff; /* Change to your desired text color */
-              border: none;
-              border-radius: 50%;
-              width: 40px; /* Adjust the width and height as needed */
-              height: 40px;
-              font-size: 24px; /* Adjust the font size as needed */
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              cursor: pointer;
-            }
-
-            .next-button:hover {
-              background-color: #0056b3; /* Change to your desired hover background color */
-            }
-
-            .photo-container {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              flex-direction: column; /* Center the image and button vertically */
-            }
-            
-            .next-button-container {
-              position: relative;
-              flex: 1; /* Allow the container to take up available space */
-              display: flex;
-              align-items: center;
-              justify-content: flex-end; /* Position the button to the right */
-            }
-            
-          `}
-        </style>
         <h1>What are you looking for?</h1>
         <div>
           <label>Search for:</label>
@@ -128,6 +86,12 @@ export default function Index() {
               text-decoration: underline;
             }
 
+            .photo-container {
+              display: flex;
+              align-items: center; /* Vertically center-align the button */
+            }
+
+            /* Style for the right arrow button */
             .next-button {
               background-color: #007bff; /* Change to your desired background color */
               color: #fff; /* Change to your desired text color */
@@ -136,29 +100,17 @@ export default function Index() {
               width: 40px; /* Adjust the width and height as needed */
               height: 40px;
               font-size: 24px; /* Adjust the font size as needed */
-              display: flex;
-              align-items: center;
-              justify-content: center;
               cursor: pointer;
+              margin-left: 10px; /* Add some space between the image and button */
             }
 
             .next-button:hover {
               background-color: #0056b3; /* Change to your desired hover background color */
             }
 
-            .photo-container {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              flex-direction: column; /* Center the image and button vertically */
-            }
-            
-            .next-button-container {
-              position: relative;
-              flex: 1; /* Allow the container to take up available space */
-              display: flex;
-              align-items: center;
-              justify-content: flex-end; /* Position the button to the right */
+            .photo-container img {
+              width: 35%; /* Adjust the width as needed */
+              height: auto;
             }
             
           `}
