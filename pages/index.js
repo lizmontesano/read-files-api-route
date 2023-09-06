@@ -98,11 +98,11 @@ export default function Index() {
           color: #fff; /* Change to your desired text color */
           border: none;
           border-radius: 50%;
-          width: 40px; /* Adjust the width and height as needed */
-          height: 40px;
+          width: 60px; /* Adjust the width and height as needed */
+          height: 60px;
           font-size: 24px; /* Adjust the font size as needed */
           cursor: pointer;
-          margin-left: -20px; /* Add some space between the image and button */
+          margin-left: -30px; /* Add some space between the image and button */
         }
 
         .next-button:hover {
