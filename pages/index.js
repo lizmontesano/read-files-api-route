@@ -94,7 +94,7 @@ export default function Index() {
 
             /* Style for the right arrow button */
             .next-button {
-              background-color: #007bff; /* Change to your desired background color */
+              background-color: grey; /* Change to your desired background color */
               color: #fff; /* Change to your desired text color */
               border: none;
               border-radius: 50%;
@@ -105,7 +105,7 @@ export default function Index() {
               position: absolute;
               top: 50%; /* Vertically center the button within the container */
               right: 0; /* Position the button at the right edge of the container */
-              transform: translate(0, -50%); /* Center the button vertically within the container */
+              transform: translate(0, -90%); /* Center the button vertically within the container */
             }
 
             .next-button:hover {
@@ -147,16 +147,6 @@ export default function Index() {
             <option value="eBay">eBay</option>
             <option value="Facebook Marketplace">Facebook Marketplace</option>
           </select>
-      </div>
-      <div>
-        {/* Show the "Next" button if there's a next photo available
-        <label>Filter by delivery options:</label>
-          <select onChange={(e) => setSelectedDelivery(e.target.value)}>
-            <option value="All">All</option>
-            <option value="shipping">Shipping</option>
-            <option value="local">Local Pick Up</option>
-          </select>
-        */}
       </div>
       <ul>
         {combinedData.map((item, index) => (
