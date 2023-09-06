@@ -122,12 +122,46 @@ export default function Index() {
   return (    
     <div>
       <style>
-        {`
-          .listing-link {
-            color: blue;
-            text-decoration: underline;
-          }
-        `}
+      {`
+            .listing-link {
+              color: blue;
+              text-decoration: underline;
+            }
+
+            .next-button {
+              background-color: #007bff; /* Change to your desired background color */
+              color: #fff; /* Change to your desired text color */
+              border: none;
+              border-radius: 50%;
+              width: 40px; /* Adjust the width and height as needed */
+              height: 40px;
+              font-size: 24px; /* Adjust the font size as needed */
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+            }
+
+            .next-button:hover {
+              background-color: #0056b3; /* Change to your desired hover background color */
+            }
+
+            .photo-container {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column; /* Center the image and button vertically */
+            }
+            
+            .next-button-container {
+              position: relative;
+              flex: 1; /* Allow the container to take up available space */
+              display: flex;
+              align-items: center;
+              justify-content: flex-end; /* Position the button to the right */
+            }
+            
+          `}
       </style>
       <h1>What are you looking for?</h1>
       <div>
