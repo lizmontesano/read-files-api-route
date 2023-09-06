@@ -81,43 +81,43 @@ export default function Index() {
     <div>
       <style>
       {`
-            .listing-link {
-              color: blue;
-              text-decoration: underline;
-            }
+        .listing-link {
+          color: blue;
+          text-decoration: underline;
+        }
 
-            /* Style for the photo container */
-            .photo-container {
-              position: relative; /* Ensure relative positioning */
-              display: inline-block; /* Prevents the container from taking full width */
-            }
+        /* Style for the photo container */
+        .photo-container {
+          position: relative;
+          display: inline-block;
+        }
 
-            /* Style for the right arrow button */
-            .next-button {
-              background-color: grey; /* Change to your desired background color */
-              color: #fff; /* Change to your desired text color */
-              border: none;
-              border-radius: 50%;
-              width: 40px; /* Adjust the width and height as needed */
-              height: 40px;
-              font-size: 24px; /* Adjust the font size as needed */
-              cursor: pointer;
-              position: absolute;
-              top: 50%; /* Vertically center the button within the container */
-              right: 0; /* Position the button at the right edge of the container */
-              transform: translate(0, -90%); /* Center the button vertically within the container */
-            }
+        /* Style for the right arrow button */
+        .next-button {
+          background-color: #007bff; /* Change to your desired background color */
+          color: #fff; /* Change to your desired text color */
+          border: none;
+          border-radius: 50%;
+          width: 40px; /* Adjust the width and height as needed */
+          height: 40px;
+          font-size: 24px; /* Adjust the font size as needed */
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          right: -80px; /* Adjust the negative margin to overlap the image */
+          transform: translateY(-90%);
+        }
 
-            .next-button:hover {
-              background-color: #0056b3; /* Change to your desired hover background color */
-            }
+        .next-button:hover {
+          background-color: #0056b3; /* Change to your desired hover background color */
+        }
 
-            .photo-container img {
-              width: 35%; /* Adjust the width as needed */
-              height: auto;
-            }
-            
-          `}
+        .photo-container img {
+          width: 35%; /* Adjust the width as needed */
+          height: auto;
+        }
+   
+      `}
       </style>
       <h1>What are you looking for?</h1>
       <div>
@@ -156,7 +156,7 @@ export default function Index() {
               <img
                 src={item[`photo_url${item.photo_index}`]}
                 alt={`Photo ${item.photo_index}`}
-                style={{ width: '35%', height: 'auto'}} // Adjust the width as needed
+                style={{ width: '35%', height: 'auto', position: 'relative'}} // Adjust the width as needed
               />
               {item[`photo_url${item.photo_index + 1}`] && (
               <button className="next-button" onClick={() => handleNextPhoto(index)}>&rarr;</button>
