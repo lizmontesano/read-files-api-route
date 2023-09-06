@@ -104,7 +104,7 @@ export default function Index() {
           cursor: pointer;
           position: absolute;
           top: 50%;
-          right: 50px; /* Adjust the negative margin to overlap the image */
+          right: 0px; /* Adjust the negative margin to overlap the image */
           transform: translateY(-50%);
         }
 
