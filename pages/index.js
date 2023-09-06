@@ -93,7 +93,7 @@ export default function Index() {
 
             /* Style for the right arrow button */
             .next-button {
-              background-color: #007bff; /* Change to your desired background color */
+              background-color: grey /* Change to your desired background color */
               color: #fff; /* Change to your desired text color */
               border: none;
               border-radius: 50%;
