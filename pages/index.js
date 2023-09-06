@@ -164,7 +164,7 @@ export default function Index() {
               <img
                 src={item[`photo_url${item.photo_index}`]}
                 alt={`Photo ${item.photo_index}`}
-                style={{ width: '35%', height: 'auto' }} // Adjust the width as needed
+                style={{ width: '35%', height: 'auto', position: 'relative' }} // Adjust the width as needed
               />
               <div className="next-button-container"></div>
               {item[`photo_url${item.photo_index + 1}`] && (
