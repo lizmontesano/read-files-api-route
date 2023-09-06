@@ -87,13 +87,12 @@ export default function Index() {
             }
 
             .photo-container {
-              display: flex;
-              align-items: center; /* Vertically center-align the button */
+              position: relative;
+              display: inline-block; /* Prevents the container from taking full width */
             }
 
-            /* Style for the right arrow button */
             .next-button {
-              background-color: grey /* Change to your desired background color */
+              background-color: grey; /* Change to your desired background color */
               color: #fff; /* Change to your desired text color */
               border: none;
               border-radius: 50%;
@@ -101,7 +100,10 @@ export default function Index() {
               height: 40px;
               font-size: 24px; /* Adjust the font size as needed */
               cursor: pointer;
-              margin-left: 10px; /* Add some space between the image and button */
+              position: absolute;
+              top: 50%; /* Vertically center the button */
+              right: 0; /* Position the button at the right edge */
+              transform: translate(50%, -50%); /* Center the button vertically */
             }
 
             .next-button:hover {
