@@ -32,6 +32,7 @@ export default function Index() {
             <option value="none">Select</option>
             <option value="sept6_noguchi">Noguchi Paper Lamp</option>
             <option value="sept6_spaceagechair">Space Age Chair</option>
+            <option value="sept7_movingsale">~Moving Sales~</option>
           </select>
         </div>
         <h3>The results shown are located within 50 miles of NYC and were posted in the last 7 days.</h3>
@@ -123,6 +124,7 @@ export default function Index() {
           <option value="none">Select</option>
           <option value="sept6_noguchi">Noguchi Paper Lamp</option>
           <option value="sept6_spaceagechair">Space Age Chair</option>
+          <option value="sept7_movingsale">~Moving Sales~</option>
         </select>
       </div>
       <h3>The results shown are located within 50 miles of NYC and were posted in the last 7 days.</h3>
