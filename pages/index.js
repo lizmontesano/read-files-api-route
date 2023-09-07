@@ -25,8 +25,10 @@ export default function Index() {
   if (!data || selectedData === 'none') {
     return (
       <div>
-        <h1><center>Hi! Welcome to Relish. I &apos m so excited that you &apos re here!</center></h1>
-        <h1>What are you looking for?</h1>
+        <h1>Relish</h1>
+        <h1><center>Used furniture and home decor curated for you.</center></h1>
+        <p><center>Relish learns your interior design style and searches every furniture resale site to find peice you'll love.</center></p>
+        <h3>What are you looking for?</h3>
         <div>
           <label>Search for:</label>
           <select onChange={(e) => setSelectedData(e.target.value)}>
