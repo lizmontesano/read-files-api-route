@@ -106,7 +106,7 @@ export default function Index() {
         }
 
         .next-button:hover {
-          background-color: #0056b3; /* Change to your desired hover background color */
+          background-color: dark grey; /* Change to your desired hover background color */
         }
 
         .photo-container img {
