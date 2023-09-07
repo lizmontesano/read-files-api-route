@@ -31,7 +31,7 @@ export default function Index() {
         <br></br>
         <br></br>
         <h3>Here&#39;s what we think you&#39;ll like:</h3>
-        <p><i>The results shown are located within 50 miles of NYC and were posted in the last 7 days.</i></p>
+        <p>The results shown are located within 50 miles of NYC and were posted in the last 7 days.</p>
         <div>
           <label>Pick one:</label>
           <select onChange={(e) => setSelectedData(e.target.value)}>
