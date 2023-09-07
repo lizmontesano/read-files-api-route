@@ -36,6 +36,7 @@ export default function Index() {
           </select>
         </div>
         <h3>The results shown are located within 50 miles of NYC and were posted in the last 7 days.</h3>
+        <h3>If you make a purchase, then I can coordinate NYC deliveries and quality checks!</h3>
       </div>
     );
   }
@@ -127,7 +128,7 @@ export default function Index() {
         </select>
       </div>
       <h3>The results shown are located within 50 miles of NYC and were posted in the last 7 days.</h3>
-      <h3>If you make a purchase, then I will coordinate NYC deliveries and quality checks!</h3>
+      <h3>If you make a purchase, then I can coordinate NYC deliveries and quality checks!</h3>
       <div>
         <h3>Results:</h3>
         <div>
