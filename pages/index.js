@@ -27,7 +27,7 @@ export default function Index() {
       <div>
         <h1>Relish</h1>
         <h1><center>Used furniture and home decor curated for you.</center></h1>
-        <p><center>Relish learns your interior design style and searches every furniture resale site to find peice you'll love.</center></p>
+        <p><center>Relish learns your interior design style and searches every furniture resale site to find peices you will love.</center></p>
         <h3>What are you looking for?</h3>
         <div>
           <label>Search for:</label>
