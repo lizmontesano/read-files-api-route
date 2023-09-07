@@ -26,8 +26,8 @@ export default function Index() {
     return (
       <div>
         <h1>Relish</h1>
-        <h1><center>A used furniture and home decor feed curated just for you.</center></h1>
-        <p><center>Relish learns your interior design style and searches every furniture resale site to find peices you&#39;ll love.</center></p>
+        <h1><center>A used furniture and home decor feed curated for you.</center></h1>
+        <p><center>Relish learns your interior design style and searches every furniture resale site to find you pieces you&#39;ll love.</center></p>
         <br></br>
         <br></br>
         <h3>Here&#39;s what we think you&#39;ll like:</h3>
@@ -123,8 +123,8 @@ export default function Index() {
       </style>
       <div>
         <h1>Relish</h1>
-        <h1><center>A used furniture and home decor feed curated just for you.</center></h1>
-        <p><center>Relish learns your interior design style and searches every furniture resale site to find peices you&#39;ll love.</center></p>
+        <h1><center>A used furniture and home decor feed curated for you.</center></h1>
+        <p><center>Relish learns your interior design style and searches every furniture resale site to find you pieces you&#39;ll love.</center></p>
         <br></br>
         <br></br>
         <h3>Here&#39;s what we think you&#39;ll like:</h3>
