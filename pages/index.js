@@ -147,6 +147,25 @@ export default function Index() {
             <option value="Facebook Marketplace">Facebook Marketplace</option>
           </select>
       </div>
+      <div>
+        <label>Filter by delivery method:</label>
+          <select onChange={(e) => setSelectedDelivery(e.target.value)}>
+            <option value="All">All</option>
+            <option value="Free local pick up from Brooklyn, NY">Pickup in Brooklyn, NY</option>
+            <option value="Free local pick up from New York, NY">Pickup in New York, NY</option>
+            <option value="Free local pick up from Jersey City, NJ">Pickup in Jersey City, NJ</option>
+            <option value="Free local pick up from Ridgewood, NY">Pickup in Ridgewood, NY</option>
+            <option value="Free local pick up from Long Island City, NY">Pickup in Long Island City, NY</option>
+            <option value="Free local pick up from Highland Park, NJ">Pickup in Highland Park, NJ</option>
+            <option value="Free local pick up from Fair Lawn, NJ">Pickup in Fair Lawn, NJ</option>
+            <option value="Free local pick up from Astoria, NY">Pickup in Astoria, NY</option>
+            <option value="Free local pick up from Forest Hills, NY">Pickup in Forest Hills, NY</option>
+            <option value="Free local pick up from Inwood, NY">Pickup in Inwood, NY</option>
+            <option value="Free local pick up from West Nyack, NY">Pickup in West Nyack, NY</option>
+            <option value="Free local pick up from Inwood, NY">Pickup in Inwood, NY</option>
+            <option value="Shipping">Shipping</option>
+          </select>
+      </div>
       <ul>
         {combinedData.map((item, index) => (
           <li key={index}>
