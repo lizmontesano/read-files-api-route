@@ -25,6 +25,7 @@ export default function Index() {
   if (!data || selectedData === 'none') {
     return (
       <div>
+        <h1><center>Hi! Welcome to Relish. I'm so excited that you're here!</center></h1>
         <h1>What are you looking for?</h1>
         <div>
           <label>Search for:</label>
