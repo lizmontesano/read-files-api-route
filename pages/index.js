@@ -34,7 +34,7 @@ export default function Index() {
         <h3>Heres some things we think youll like:</h3>
         <p><italics>The results shown are located within 50 miles of NYC and were posted in the last 7 days.</italics></p>
         <div>
-          <label>Let's go!</label>
+          <label>Lets go!</label>
           <select onChange={(e) => setSelectedData(e.target.value)}>
             <option value="none">Select</option>
             <option value="sept6_noguchi">Noguchi Paper Lamp</option>
