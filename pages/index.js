@@ -27,14 +27,13 @@ export default function Index() {
       <div>
         <h1>Relish</h1>
         <h1><center>Used furniture and home decor curated for you.</center></h1>
-        <p><center>Relish learns your interior design style and searches every furniture resale site to find peices you will love.</center></p>
+        <p><center>Relish learns your interior design style and searches every furniture resale site to find peices you&#39;ll love.</center></p>
         <br></br>
         <br></br>
-        <br></br>
-        <h3>Heres some things we think youll like:</h3>
-        <p><italics>The results shown are located within 50 miles of NYC and were posted in the last 7 days.</italics></p>
+        <h3>Here&#39;s what we think you&#39;ll like:</h3>
+        <p><italic>The results shown are located within 50 miles of NYC and were posted in the last 7 days.</italic></p>
         <div>
-          <label>Lets go!</label>
+          <label>Pick one:</label>
           <select onChange={(e) => setSelectedData(e.target.value)}>
             <option value="none">Select</option>
             <option value="sept6_noguchi">Noguchi Paper Lamp</option>
