@@ -151,7 +151,7 @@ export default function Index() {
         <label>Filter by delivery method:</label>
           <select onChange={(e) => setSelectedDelivery(e.target.value)}>
             <option value="All">All</option>
-            <option value=" ">Liz's delivery! I will delivery things to you!</option>
+            <option value="p">Liz's delivery! I will delivery things to you!</option>
             <option value="Free local pick up from Brooklyn, NY">Pickup in Brooklyn, NY</option>
             <option value="Free local pick up from New York, NY">Pickup in New York, NY</option>
             <option value="Free local pick up from Jersey City, NJ">Pickup in Jersey City, NJ</option>
