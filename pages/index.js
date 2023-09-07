@@ -28,9 +28,11 @@ export default function Index() {
         <h1>Relish</h1>
         <h1><center>Used furniture and home decor curated for you.</center></h1>
         <p><center>Relish learns your interior design style and searches every furniture resale site to find peices you will love.</center></p>
-        <h3>What are you looking for?</h3>
+        <h3>Here is what we can help you find:</h3>
+        <p>The results shown are located within 50 miles of NYC and were posted in the last 7 days.</p>
+        <p>If you make a purchase, then I can coordinate NYC deliveries and quality checks!</p>
         <div>
-          <label>Search for:</label>
+          <label>Find:</label>
           <select onChange={(e) => setSelectedData(e.target.value)}>
             <option value="none">Select</option>
             <option value="sept6_noguchi">Noguchi Paper Lamp</option>
@@ -38,8 +40,6 @@ export default function Index() {
             <option value="sept7_movingsale">~Moving Sales~</option>
           </select>
         </div>
-        <h3>The results shown are located within 50 miles of NYC and were posted in the last 7 days.</h3>
-        <h3>If you make a purchase, then I can coordinate NYC deliveries and quality checks!</h3>
       </div>
     );
   }
