@@ -38,7 +38,7 @@ export default function Index() {
             <option value="none">Select</option>
             <option value="sept11_noguchi">Noguchi Paper Lamp</option>
             <option value="sept11_spaceagechair.json">Space Age Chair</option>
-            <option value="sept7_movingsale">~Moving Sales~</option>
+            <option value="sept11_movingsale">~Moving Sales~</option>
           </select>
         </div>
       </div>
