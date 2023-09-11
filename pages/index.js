@@ -37,7 +37,7 @@ export default function Index() {
           <select onChange={(e) => setSelectedData(e.target.value)}>
             <option value="none">Select</option>
             <option value="sept11_noguchi">Noguchi Paper Lamp</option>
-            <option value="sept6_spaceagechair">Space Age Chair</option>
+            <option value="sept11_spaceagechair">Space Age Chair</option>
             <option value="sept7_movingsale">~Moving Sales~</option>
           </select>
         </div>
