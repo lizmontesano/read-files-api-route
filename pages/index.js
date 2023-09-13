@@ -73,6 +73,7 @@ export default function Index() {
             onClick={() => setSelectedData('sept11_spaceagechair')}
           />
         </div>
+        <div id="newContent"></div>
       </div>
     );
   }
@@ -186,7 +187,7 @@ export default function Index() {
             onClick={() => setSelectedData('sept11_spaceagechair')}
           />
         </div>
-      <div id="newContent">
+      <div id="x">
         <br></br>
         <br></br>
         <h3>Here are secondhand and vintage pieces featured in that photo.</h3>
