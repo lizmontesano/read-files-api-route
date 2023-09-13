@@ -150,7 +150,7 @@ export default function Index() {
     
         /* Style for each clickable image */
         .image-select img {
-          width: 150px; /* Adjust the width of each image as needed */
+          width: 500px; /* Adjust the width of each image as needed */
           height: auto;
           cursor: pointer; /* Change the cursor to a pointer on hover */
         }
