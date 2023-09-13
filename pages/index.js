@@ -27,20 +27,18 @@ export default function Index() {
       <div>
         <h1>Relish</h1>
         <h1><center>A used furniture and home decor feed curated for you.</center></h1>
-        <p><center>Relish learns your interior design style and searches every furniture resale site to find you pieces you&#39;ll love.</center></p>
+        <p><center>Relish learns your interior design style then searches furniture resale sites to find unique, affordable pieces you&#39;ll love.</center></p>
         <br></br>
         <br></br>
-        <h3>Here&#39;s what we think you&#39;ll like:</h3>
-        <p>The results shown are located within 50 miles of NYC and were posted in the last 7 days.</p>
+        <h3>First, let us know what you like.</h3>
         <div>
-          <label>Pick one:</label>
-          <select onChange={(e) => setSelectedData(e.target.value)}>
-            <option value="none">Select</option>
-            <option value="sept11_noguchi">Noguchi Paper Lamp</option>
-            <option value="sept11_spaceagechair">Space Age Chair</option>
-            <option value="sept11_movingsale">~Moving Sales~</option>
-          </select>
+          <label>Do you like this?</label>
+          <select onChange={(e) => setSelectedData(e.target.value)}></select>
+            <option value="sept11_noguchi">Yes</option>
+            <option value=" ">No</option>
         </div>
+        <img src="https://pbs.twimg.com/media/F53x9reWcAAPZUO?format=jpg&name=large" alt="alternatetext"/>
+        <h3>Second, start shopping</h3>
       </div>
     );
   }
