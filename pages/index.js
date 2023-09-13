@@ -187,8 +187,10 @@ export default function Index() {
           />
         </div>
       <div id="newContent">
-        <h3>Here are secondhand and vintage pieces featured in that photo:</h3>
-        <p>All results shown are within 50 miles on NYC and listed in the last 7 days.</p>
+        <br></br>
+        <br></br>
+        <h3>Here are secondhand and vintage pieces featured in that photo.</h3>
+        <p>All results shown are within 50 miles of NYC and listed in the last 7 days.</p>
         <div>
         {/* <label>Sort by price:</label>
           <select onChange={(e) => setSortBy(e.target.value)}>
@@ -227,7 +229,7 @@ export default function Index() {
       <ul>
         {combinedData.map((item, index) => (
           <li key={index}>
-            <h2>{item.title}</h2>
+            <h3>{item.title}</h3>
             <div className="photo-container">
               <img
                 src={item[`photo_url${item.photo_index}`]}
