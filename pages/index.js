@@ -30,7 +30,7 @@ export default function Index() {
         <p><center>Relish learns your interior design style then searches furniture resale sites to find unique, affordable pieces you&#39;ll love.</center></p>
         <br></br>
         <h3>First, pick the image that most closely matches your aesthetic.</h3>
-        <input type="image" src="https://pbs.twimg.com/media/F53x9reWcAAPZUO?format=jpg&name=large" name="submit" width="100" height="48" alt="submit"/>  
+        <input type="image" src="https://pbs.twimg.com/media/F53x9reWcAAPZUO?format=jpg&name=large" name="submit" width="1000" height="480" alt="submit"/>  
         <h3>Second, start shopping</h3>
       </div>
     );
