@@ -1,5 +1,5 @@
 //useSWR allows the use of SWR inside function components
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react'; 
 import useSWR from "swr";
 
 //Write a fetcher function to wrap the native fetch function and return the result of a call to url in json format
@@ -29,7 +29,7 @@ export default function Index() {
       }
     }
   }, [selectedData]);
-  
+
   //Handle the error state
   if (error) return <div>Failed to load</div>;
   // Check if data is not available yet or if no data source is selected
