@@ -1,5 +1,6 @@
 //useSWR allows the use of SWR inside function components
-import React, { useState, useLayoutEffect } from 'react'; 
+//import React, { useState, useLayoutEffect } from 'react'; 
+import { useState, useLayoutEffect } from 'react';
 import useSWR from "swr";
 
 //Write a fetcher function to wrap the native fetch function and return the result of a call to url in json format
