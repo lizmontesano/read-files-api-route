@@ -29,9 +29,9 @@ export default function Index() {
         <h1><center>A used furniture and home decor feed curated for you.</center></h1>
         <p><center>Relish learns your interior design style then searches furniture resale sites to find unique, affordable pieces you&#39;ll love.</center></p>
         <br></br>
-        <h3>First, let&#39;s get to know your taste</h3>
+        <h3>Let&#39;s get to know your taste</h3>
         <div>
-          <label>Is this what you're going for?</label>
+          <label>Is this what you&#39;re going for?</label>
           <select onChange={(e) => setSelectedData(e.target.value)}>
               <option value="none">Select</option>
               <option value="Yes">Yes, I want to shop these pieces!</option>
