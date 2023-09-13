@@ -187,14 +187,15 @@ export default function Index() {
           />
         </div>
       <div id="newContent">
-        <h3>Results:</h3>
+        <h3>Here are secondhand and vintage pieces featured in that photo:</h3>
+        <p>All results shown are within 50 miles on NYC and listed in the last 7 days.</p>
         <div>
-        <label>Sort by price:</label>
+        {/* <label>Sort by price:</label>
           <select onChange={(e) => setSortBy(e.target.value)}>
             <option value="none">None</option>
             <option value="lowToHigh">Low to High</option>
             <option value="highToLow">High to Low</option>
-          </select>
+          </select> */}
       </div>
       <div>
         <label>Filter by source:</label>
