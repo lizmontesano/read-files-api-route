@@ -37,7 +37,7 @@ export default function Index() {
       
           /* Style for each clickable image */
           .image-select img {
-            width: 150px; /* Adjust the width of each image as needed */
+            width: 500px; /* Adjust the width of each image as needed */
             height: auto;
             cursor: pointer; /* Change the cursor to a pointer on hover */
           }
@@ -49,22 +49,18 @@ export default function Index() {
         <p><center>Relish learns your interior design style then searches furniture resale sites to find unique, affordable pieces you&#39;ll love.</center></p>
         <br></br>
         <br></br>
-        <h3>Here&#39;s what we think you&#39;ll like:</h3>
-        <p><italic>The results shown are located within 50 miles of NYC and were posted in the last 7 days.</italic></p>
-        <div>
-          <label>Pick one:</label>
-          <div className="image-select">
-            <img
-              src="https://pbs.twimg.com/media/F53x9reWcAAPZUO?format=jpg&name=large"
-              alt="Image 1"
-              onClick={() => setSelectedData('sept11_noguchi')}
-            />
-            <img
-              src="https://pbs.twimg.com/media/F51aW7DWwAAsVIk?format=jpg&name=large"
-              alt="Image 2"
-              onClick={() => setSelectedData('sept11_spaceagechair')}
-            />
-          </div>
+        <h3>Pick the image that most closely matches your style:</h3>
+        <div className="image-select">
+          <img
+            src="https://pbs.twimg.com/media/F53x9reWcAAPZUO?format=jpg&name=large"
+            alt="Image 1"
+            onClick={() => setSelectedData('sept11_noguchi')}
+          />
+          <img              
+            src="https://pbs.twimg.com/media/F51aW7DWwAAsVIk?format=jpg&name=large"
+            alt="Image 2"
+            onClick={() => setSelectedData('sept11_spaceagechair')}
+          />
         </div>
       </div>
     );
