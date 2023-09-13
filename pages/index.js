@@ -73,7 +73,6 @@ export default function Index() {
             onClick={() => setSelectedData('sept11_spaceagechair')}
           />
         </div>
-        <div id="newContent"></div>
       </div>
     );
   }
@@ -187,10 +186,11 @@ export default function Index() {
             onClick={() => setSelectedData('sept11_spaceagechair')}
           />
         </div>
-      <div id="x">
         <br></br>
         <br></br>
+        <div id="newContent">
         <h3>Here are secondhand and vintage pieces featured in that photo.</h3>
+        </div>
         <p>All results shown are within 50 miles of NYC and listed in the last 7 days.</p>
         <div>
         {/* <label>Sort by price:</label>
@@ -199,7 +199,6 @@ export default function Index() {
             <option value="lowToHigh">Low to High</option>
             <option value="highToLow">High to Low</option>
           </select> */}
-      </div>
       <div>
         <label>Filter by source:</label>
           <select onChange={(e) => setSelectedSource(e.target.value)}>
