@@ -22,6 +22,7 @@ export default function Index() {
 
   useEffect(() => {
     // Scroll to the newly loaded content when it becomes available
+    console.log('useEffect triggered');
     if (selectedData !== 'none') {
       const targetElement = document.getElementById('newContent'); // Replace with your actual ID
       if (targetElement) {
