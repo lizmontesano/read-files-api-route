@@ -29,15 +29,8 @@ export default function Index() {
         <h1><center>A used furniture and home decor feed curated for you.</center></h1>
         <p><center>Relish learns your interior design style then searches furniture resale sites to find unique, affordable pieces you&#39;ll love.</center></p>
         <br></br>
-        <br></br>
-        <h3>First, let us know what you like.</h3>
-        <div>
-          <label>Do you like this?</label>
-          <select onChange={(e) => setSelectedData(e.target.value)}></select>
-            <option value="sept11_noguchi">Yes</option>
-            <option value=" ">No</option>
-        </div>
-        <img src="https://pbs.twimg.com/media/F53x9reWcAAPZUO?format=jpg&name=large" alt="alternatetext"/>
+        <h3>First, pick the image that most closely matches your aesthetic.</h3>
+        <input type="image" src="https://pbs.twimg.com/media/F53x9reWcAAPZUO?format=jpg&name=large" name="submit" width="100" height="48" alt="submit"/>  
         <h3>Second, start shopping</h3>
       </div>
     );
