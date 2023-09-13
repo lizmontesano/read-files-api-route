@@ -1,5 +1,5 @@
 //useSWR allows the use of SWR inside function components
-import React, { useState, useEffect } from 'react'; 
+import React, { useState, useLayoutEffect } from 'react'; 
 import useSWR from "swr";
 
 //Write a fetcher function to wrap the native fetch function and return the result of a call to url in json format
@@ -20,9 +20,8 @@ export default function Index() {
     fetcher
   );
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     // Scroll to the newly loaded content when it becomes available
-    console.log('useEffect triggered');
     if (selectedData !== 'none') {
       const targetElement = document.getElementById('newContent'); // Replace with your actual ID
       if (targetElement) {
