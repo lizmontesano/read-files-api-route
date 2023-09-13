@@ -19,6 +19,17 @@ export default function Index() {
     selectedData !== 'none' ? `/api/staticdata?selectedData=${selectedData}` : null,
     fetcher
   );
+
+  useEffect(() => {
+    // Scroll to the newly loaded content when it becomes available
+    if (selectedData !== 'none') {
+      const targetElement = document.getElementById('newContent'); // Replace with your actual ID
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to the element
+      }
+    }
+  }, [selectedData]);
+  
   //Handle the error state
   if (error) return <div>Failed to load</div>;
   // Check if data is not available yet or if no data source is selected
@@ -175,7 +186,7 @@ export default function Index() {
             onClick={() => setSelectedData('sept11_spaceagechair')}
           />
         </div>
-      <div>
+      <div id="newContent">
         <h3>Results:</h3>
         <div>
         <label>Sort by price:</label>
