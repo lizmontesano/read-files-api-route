@@ -38,11 +38,15 @@ export default function Index() {
               <option value="No">Show me more</option>
           </select>
         </div>
-        <img
-          src= "https://pbs.twimg.com/media/F53x9reWcAAPZUO?format=jpg&name=large"
-          alt= "need 1"
-          style={{ width: '35%', height: 'auto' }} // Adjust the width as needed
-        />
+        <div>
+          <center>
+            <img
+              src= "https://pbs.twimg.com/media/F53x9reWcAAPZUO?format=jpg&name=large"
+              alt= "need 1"
+              style={{width: '35%', height: 'auto' }} // Adjust the width as needed
+            />
+          </center>
+        </div>
       </div>
     );
   }
