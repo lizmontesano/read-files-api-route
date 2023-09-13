@@ -25,6 +25,25 @@ export default function Index() {
   if (!data || selectedData === 'none') {
     return (
       <div>
+        <style>
+        {`
+          /* Style for the image select container */
+          .image-select {
+            display: flex;
+            flex-wrap: wrap; /* Wrap images to the next row */
+            justify-content: center; /* Center the images horizontally */
+            gap: 20px; /* Adjust the gap between images */
+          }
+      
+          /* Style for each clickable image */
+          .image-select img {
+            width: 150px; /* Adjust the width of each image as needed */
+            height: auto;
+            cursor: pointer; /* Change the cursor to a pointer on hover */
+          }
+        `}
+        </style>
+
         <h1>Relish</h1>
         <h1><center>A used furniture and home decor feed curated for you.</center></h1>
         <p><center>Relish learns your interior design style then searches furniture resale sites to find unique, affordable pieces you&#39;ll love.</center></p>
@@ -34,12 +53,18 @@ export default function Index() {
         <p><italic>The results shown are located within 50 miles of NYC and were posted in the last 7 days.</italic></p>
         <div>
           <label>Pick one:</label>
-          <select onChange={(e) => setSelectedData(e.target.value)}>
-            <option value="none">Select</option>
-            <option value="sept11_noguchi">Noguchi Paper Lamp</option>
-            <option value="sept11_spaceagechair">Space Age Chair</option>
-            <option value="sept11_movingsale">~Moving Sales~</option>
-          </select>
+          <div className="image-select">
+            <img
+              src="https://pbs.twimg.com/media/F53x9reWcAAPZUO?format=jpg&name=large"
+              alt="Image 1"
+              onClick={() => setSelectedData('sept11_noguchi')}
+            />
+            <img
+              src="https://pbs.twimg.com/media/F51aW7DWwAAsVIk?format=jpg&name=large"
+              alt="Image 2"
+              onClick={() => setSelectedData('sept11_spaceagechair')}
+            />
+          </div>
         </div>
       </div>
     );
@@ -118,7 +143,22 @@ export default function Index() {
           width: 35%; /* Adjust the width as needed */
           height: auto;
         }
-   
+
+        /* Style for the image select container */
+        .image-select {
+          display: flex;
+          flex-wrap: wrap; /* Wrap images to the next row */
+          justify-content: center; /* Center the images horizontally */
+          gap: 20px; /* Adjust the gap between images */
+        }
+    
+        /* Style for each clickable image */
+        .image-select img {
+          width: 150px; /* Adjust the width of each image as needed */
+          height: auto;
+          cursor: pointer; /* Change the cursor to a pointer on hover */
+        }
+    
       `}
       </style>
       <div>
