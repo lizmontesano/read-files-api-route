@@ -49,7 +49,7 @@ export default function Index() {
         <p><center>Relish learns your interior design style then searches furniture resale sites to find unique, affordable pieces you&#39;ll love.</center></p>
         <br></br>
         <br></br>
-        <h3>Pick the image that most closely matches your style:</h3>
+        <h3>Click on an image to shop second hand and vintage furniture in that style.</h3>
         <div className="image-select">
           <img
             src="https://pbs.twimg.com/media/F53x9reWcAAPZUO?format=jpg&name=large"
@@ -157,24 +157,24 @@ export default function Index() {
     
       `}
       </style>
-      <div>
-        <h1>Relish</h1>
+      <h1>Relish</h1>
         <h1><center>A used furniture and home decor feed curated for you.</center></h1>
-        <p><center>Relish learns your interior design style and searches every furniture resale site to find you pieces you&#39;ll love.</center></p>
+        <p><center>Relish learns your interior design style then searches furniture resale sites to find unique, affordable pieces you&#39;ll love.</center></p>
         <br></br>
         <br></br>
-        <h3>Here&#39;s what we think you&#39;ll like:</h3>
-        <p><italic>The results shown are located within 50 miles of NYC and were posted in the last 7 days.</italic></p>
-        <div>
-          <label>Pick one:</label>
-          <select onChange={(e) => setSelectedData(e.target.value)}>
-            <option value="none">Select</option>
-            <option value="sept11_noguchi">Noguchi Paper Lamp</option>
-            <option value="sept11_spaceagechair">Space Age Chair</option>
-            <option value="sept11_movingsale">~Moving Sales~</option>
-          </select>
+        <h3>Click on an image to shop second hand and vintage furniture in that style.</h3>
+        <div className="image-select">
+          <img
+            src="https://pbs.twimg.com/media/F53x9reWcAAPZUO?format=jpg&name=large"
+            alt="Image 1"
+            onClick={() => setSelectedData('sept11_noguchi')}
+          />
+          <img              
+            src="https://pbs.twimg.com/media/F51aW7DWwAAsVIk?format=jpg&name=large"
+            alt="Image 2"
+            onClick={() => setSelectedData('sept11_spaceagechair')}
+          />
         </div>
-      </div>
       <div>
         <h3>Results:</h3>
         <div>
