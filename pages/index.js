@@ -23,6 +23,7 @@ export default function Index() {
 
   useLayoutEffect(() => {
     // Scroll to the newly loaded content when it becomes available
+    console.log("useLayoutEffect triggered")
     if (selectedData !== 'none') {
       const targetElement = document.getElementById('newContent'); // Replace with your actual ID
       if (targetElement) {
