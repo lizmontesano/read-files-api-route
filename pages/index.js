@@ -8,7 +8,7 @@ export default function Index() {
 
   const [sortBy, setSortBy] = useState('None'); 
   const [selectedSource, setSelectedSource] = useState('All'); 
-  const [selectedData, setSelectedData] = useState('sept11_noguchi');
+  const [selectedData, setSelectedData] = useState('none');
   const [selectedDelivery, setSelectedDelivery] = useState('All');
   const contentRef = useRef(null);
 
@@ -18,8 +18,71 @@ export default function Index() {
     selectedData !== 'none' ? `/api/staticdata?selectedData=${selectedData}` : null,
     fetcher
   );
+    
 
-    //Filter and sort functionality
+  //Handle the error state
+  if (error) return <div>Failed to load</div>;
+  // Check if data is not available yet or if no data source is selected
+  if (!data || selectedData === 'none') {
+    return (
+      <div>
+        <style>
+        {`
+          /* Style for the image select container */
+          .image-select {
+            display: flex;
+            flex-wrap: wrap; /* Wrap images to the next row */
+            justify-content: center; /* Center the images horizontally */
+            gap: 20px; /* Adjust the gap between images */
+          }
+      
+          /* Style for each clickable image */
+          .image-select img {
+            width: 500px; /* Adjust the width of each image as needed */
+            height: auto;
+            cursor: pointer; /* Change the cursor to a pointer on hover */
+          }
+        `}
+        </style>
+
+        <h1>Relish</h1>
+        <h1><center>A used furniture and home decor feed curated for you.</center></h1>
+        <p><center>Relish learns your interior design style then searches furniture resale sites to find unique, affordable pieces you&#39;ll love.</center></p>
+        <br></br>
+        <br></br>
+        <h3>Click on an image to shop second hand and vintage furniture in that style.</h3>
+        <div className="image-select">
+          <img
+            src="https://pbs.twimg.com/media/F53x9reWcAAPZUO?format=jpg&name=large"
+            alt="Image 1"
+            onClick={() => {
+              setSelectedData('sept11_noguchi');
+              setTimeout(() => {
+                contentRef.current.scrollIntoView({ behavior: 'smooth' });
+              }, "300");
+            }}
+          />
+          <img              
+            src="https://pbs.twimg.com/media/F51aW7DWwAAsVIk?format=jpg&name=large"
+            alt="Image 2"
+            onClick={() => {
+              setSelectedData('sept11_spaceagechair');
+              setTimeout(() => {
+                contentRef.current.scrollIntoView({ behavior: 'smooth' });
+              }, "300");
+            }}
+          />
+        </div>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <div ref={contentRef} id="startScrollToThisContent" ></div>
+      </div>
+    );
+  }
+  
+  //Filter and sort functionality
   //const filteredData = selectedSource === 'All'
   //  ? data
   //  : data.filter(item => item.source === selectedSource);
@@ -49,124 +112,6 @@ export default function Index() {
 
     // You might also want to update the alt attribute of the image
     imageElement.alt = `Photo ${listing.photo_index + 1}`;
-  }
-    
-
-  //Handle the error state
-  if (error) return <div>Failed to load</div>;
-  // Check if data is not available yet or if no data source is selected
-  if (!data || selectedData === 'none') {
-    return (
-      <div>
-        <style>
-        {`
-          /* Style for the image select container */
-          .image-select {
-            display: flex;
-            flex-wrap: wrap; /* Wrap images to the next row */
-            justify-content: center; /* Center the images horizontally */
-            gap: 20px; /* Adjust the gap between images */
-          }
-      
-          /* Style for each clickable image */
-          .image-select img {
-            width: 500px; /* Adjust the width of each image as needed */
-            height: auto;
-            cursor: pointer; /* Change the cursor to a pointer on hover */
-          }
-        `}
-        </style>
-        <h1>Relish</h1>
-        <h1><center>A used furniture and home decor feed curated for you.</center></h1>
-        <p><center>Relish learns your interior design style then searches furniture resale sites to find unique, affordable pieces you&#39;ll love.</center></p>
-        <br></br>
-        <br></br>
-        <h3>Click on an image to shop second hand and vintage furniture in that style.</h3>
-        <div className="image-select">
-          <img
-            src="https://pbs.twimg.com/media/F53x9reWcAAPZUO?format=jpg&name=large"
-            alt="Image 1"
-            onClick={() => {
-              setSelectedData('sept11_noguchi');
-              contentRef.current.scrollIntoView({ behavior: 'smooth' });
-            }}
-          />
-          <img              
-            src="https://pbs.twimg.com/media/F51aW7DWwAAsVIk?format=jpg&name=large"
-            alt="Image 2"
-            onClick={() => {
-              setSelectedData('sept11_spaceagechair');
-              contentRef.current.scrollIntoView({ behavior: 'smooth' });
-            }}
-          />
-        </div>
-        <br></br>
-        <br></br>
-        <div ref={contentRef} id="scrollToThisContent">
-        <div style="display:none">
-        <h3>Here are secondhand and vintage pieces featured in that photo.</h3>
-        </div>
-        <p>All results shown are within 50 miles of NYC and listed in the last 7 days.</p>
-        <div>
-        {/* <label>Sort by price:</label>
-          <select onChange={(e) => setSortBy(e.target.value)}>
-            <option value="none">None</option>
-            <option value="lowToHigh">Low to High</option>
-            <option value="highToLow">High to Low</option>
-          </select> */}
-      <div>
-        <label>Filter by source:</label>
-          <select onChange={(e) => setSelectedSource(e.target.value)}>
-            <option value="All">All</option>
-            <option value="eBay">eBay</option>
-            <option value="Facebook Marketplace">Facebook Marketplace</option>
-          </select>
-      </div>
-      <div>
-        <label>Filter by delivery method:</label>
-          <select onChange={(e) => setSelectedDelivery(e.target.value)}>
-            <option value="All">All</option>
-            <option value="p">Liz delivers to you! Maybe even for free if you ask nicely!</option>
-            <option value="Free local pick up from Brooklyn, NY">Pickup in Brooklyn, NY</option>
-            <option value="Free local pick up from New York, NY">Pickup in New York, NY</option>
-            <option value="Free local pick up from Jersey City, NJ">Pickup in Jersey City, NJ</option>
-            <option value="Free local pick up from Ridgewood, NY">Pickup in Ridgewood, NY</option>
-            <option value="Free local pick up from Long Island City, NY">Pickup in Long Island City, NY</option>
-            <option value="Free local pick up from Highland Park, NJ">Pickup in Highland Park, NJ</option>
-            <option value="Free local pick up from Fair Lawn, NJ">Pickup in Fair Lawn, NJ</option>
-            <option value="Free local pick up from Astoria, NY">Pickup in Astoria, NY</option>
-            <option value="Free local pick up from Forest Hills, NY">Pickup in Forest Hills, NY</option>
-            <option value="Free local pick up from Inwood, NY">Pickup in Inwood, NY</option>
-            <option value="Free local pick up from West Nyack, NY">Pickup in West Nyack, NY</option>
-            <option value="Shipping">Shipping</option>
-          </select>
-      </div>
-      <ul>
-        {combinedData.map((item, index) => (
-          <li key={index}>
-            <h3>{item.title}</h3>
-            <div className="photo-container">
-              <img
-                src={item[`photo_url${item.photo_index}`]}
-                alt={`Photo ${item.photo_index}`}
-                style={{ width: '35%', height: 'auto' }} // Adjust the width as needed
-              />
-              {item[`photo_url${item.photo_index + 1}`] && (
-              <button className="next-button" onClick={() => handleNextPhoto(index)}>&rarr;</button>
-              )}
-            </div>
-            <p>Price: {item.price}</p>
-            <p>Shipping: {item.delivery}</p>
-            <p>Returns: {item.returns}</p>
-            <p>Source: {item.source}</p>
-            <a className="listing-link" href={item.listing_url} target="_blank" rel="noopener noreferrer">View Listing</a>
-          </li>
-        ))}
-      </ul>
-      </div>
-      </div>
-      </div>
-    );
   }
 
   return (    
