@@ -199,19 +199,15 @@ export default function Index() {
         <p><center>Relish learns your interior design style then searches furniture resale sites to find unique, affordable pieces you&#39;ll love.</center></p>
         <br></br>
         <br></br>
-        <h3>Already know what you&#39;re looking for? Search here:
-          <select 
-          onChange={(e) => {
-            setSelectedData(e.target.value);
+        <h3>Already know what you&#39;re looking for?
+          <input type="text" id="item" name="item" placeholder="Search here">
+          </input>
+          <button onClick={(e) => {
+            setSelectedData('sept11_spaceagechair');
             setTimeout(() => {
               contentRef.current.scrollIntoView({ behavior: 'smooth' });
             }, "500");
-          }} >
-            <option value="none">Select</option>
-            <option value="sept11_noguchi">Noguchi Paper Lamp</option>
-            <option value="sept11_spaceagechair">Space Age Chair</option>
-            <option value="sept11_movingsale">~Moving Sales~</option>
-          </select>
+          }}>Go!</button>
         </h3>
         <h3>Want to get inspired? Click on an image below to shop pieces in that style..</h3>
         <div className="image-select">
