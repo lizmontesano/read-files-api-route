@@ -46,8 +46,8 @@ export default function Index() {
         </style>
 
         <h1>Relish</h1>
-        <h1><center>A used furniture and home decor feed curated for you.</center></h1>
-        <p><center>Relish learns your interior design style then searches furniture resale sites to find unique, affordable pieces you&#39;ll love.</center></p>
+        <h1><center>A used furniture and home decor shop curated just for you.</center></h1>
+        <p><center>Learn your interior design style then search across resale sites to find unique, affordable pieces you&#39;ll love.</center></p>
         <br></br>
         <br></br>
         <h3>Already know what you&#39;re looking for?
@@ -195,8 +195,8 @@ export default function Index() {
       `}
       </style>
       <h1>Relish</h1>
-        <h1><center>A used furniture and home decor feed curated for you.</center></h1>
-        <p><center>Relish learns your interior design style then searches furniture resale sites to find unique, affordable pieces you&#39;ll love.</center></p>
+        <h1><center>A used furniture and home decor shop curated just for you.</center></h1>
+        <p><center>Learn your interior design style then search across resale sites to find unique, affordable pieces you&#39;ll love.</center></p>
         <br></br>
         <br></br>
         <h3>Already know what you&#39;re looking for?
