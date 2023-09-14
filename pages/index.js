@@ -59,7 +59,7 @@ export default function Index() {
               setSelectedData('sept11_noguchi');
               setTimeout(() => {
                 contentRef.current.scrollIntoView({ behavior: 'smooth' });
-              }, "300");
+              }, "400");
             }}
           />
           <img              
@@ -69,7 +69,7 @@ export default function Index() {
               setSelectedData('sept11_spaceagechair');
               setTimeout(() => {
                 contentRef.current.scrollIntoView({ behavior: 'smooth' });
-              }, "300");
+              }, "400");
             }}
           />
         </div>
