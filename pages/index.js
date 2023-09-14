@@ -239,7 +239,7 @@ export default function Index() {
         <br></br>
         <br></br>
         <div ref={contentRef} id="scrollToThisContent">
-        <h3>Here are secondhand and vintage pieces similar to those featured in that photo.</h3>
+        <h3>Here&#39;s what we found.</h3>
         </div>
         <p>All results shown are within 50 miles of NYC and listed in the last 7 days.</p>
         <div>
