@@ -72,8 +72,12 @@ export default function Index() {
             alt="Image 2"
             onClick={() => {
               setSelectedData('sept11_spaceagechair');
+              console.log("contentRef.current is: ")
+              console.log(contentRef.current)
               contentRef.current.scrollIntoView({ behavior: 'smooth' });
               setTimeout(() => {
+                console.log("in setTimeout contentRef.current is: ")
+                console.log(contentRef.current)
                 contentRef.current.scrollIntoView({ behavior: 'smooth' });
               }, "250");
             }}
