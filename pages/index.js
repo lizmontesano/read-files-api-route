@@ -57,7 +57,12 @@ export default function Index() {
             alt="Image 1"
             onClick={() => {
               setSelectedData('sept11_noguchi');
+              console.log("contentRef.current is: ")
+              console.log(contentRef.current)
+              contentRef.current.scrollIntoView({ behavior: 'smooth' });
               setTimeout(() => {
+                console.log("in setTimeout contentRef.current is: ")
+                console.log(contentRef.current)
                 contentRef.current.scrollIntoView({ behavior: 'smooth' });
               }, "500");
             }}
@@ -67,12 +72,18 @@ export default function Index() {
             alt="Image 2"
             onClick={() => {
               setSelectedData('sept11_spaceagechair');
+              contentRef.current.scrollIntoView({ behavior: 'smooth' });
               setTimeout(() => {
                 contentRef.current.scrollIntoView({ behavior: 'smooth' });
               }, "500");
             }}
           />
         </div>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <div ref={contentRef} id="startScrollToThisContent" ></div>
       </div>
     );
   }
