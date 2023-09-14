@@ -1,6 +1,4 @@
-//useSWR allows the use of SWR inside function components
-//import React, { useState, useLayoutEffect } from 'react'; 
-import { useState, useLayoutEffect } from 'react';
+import { useState, useLayoutEffect, useRef } from 'react';
 import useSWR from "swr";
 
 //Write a fetcher function to wrap the native fetch function and return the result of a call to url in json format
@@ -8,11 +6,12 @@ const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Index() {
 
-  //Selecting data, sorting by price, filtering by source
-  const [sortBy, setSortBy] = useState('None'); // Default sorting by price
-  const [selectedSource, setSelectedSource] = useState('All'); // Default: show all items
-  const [selectedData, setSelectedData] = useState('none'); // Default: use data1.json
-  const [selectedDelivery, setSelectedDelivery] = useState('All'); // Default: all
+  const [sortBy, setSortBy] = useState('None'); 
+  const [selectedSource, setSelectedSource] = useState('All'); 
+  const [selectedData, setSelectedData] = useState('none');
+  const [selectedDelivery, setSelectedDelivery] = useState('All');
+  const [isContentLoaded, setIsContentLoaded] = useState(false); 
+  const newContentRef = useRef(); //Ref for the target element
 
   //Set up SWR to run the fetcher function when calling "/api/staticdata"
   //There are 3 possible states: (1) loading when data is null (2) ready when the data is returned (3) error when there was an error fetching the data
@@ -20,6 +19,17 @@ export default function Index() {
     selectedData !== 'none' ? `/api/staticdata?selectedData=${selectedData}` : null,
     fetcher
   );
+    
+  useEffect(() => {
+    if (isContentLoaded && newContentRef.current) {
+      newContentRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [isContentLoaded]);
+
+  // Function to load content and set isContentLoaded to true when content is ready
+  const loadContent = () => {
+    //WHAT GOES HERE
+  };
 
   useLayoutEffect(() => {
     // Scroll to the newly loaded content when it becomes available
@@ -190,7 +200,7 @@ export default function Index() {
         </div>
         <br></br>
         <br></br>
-        <div id="newContent">
+        <div ref={newContentRef} id="newContent">
         <h3>Here are secondhand and vintage pieces featured in that photo.</h3>
         </div>
         <p>All results shown are within 50 miles of NYC and listed in the last 7 days.</p>
