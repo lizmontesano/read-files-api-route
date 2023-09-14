@@ -18,6 +18,38 @@ export default function Index() {
     selectedData !== 'none' ? `/api/staticdata?selectedData=${selectedData}` : null,
     fetcher
   );
+
+    //Filter and sort functionality
+  //const filteredData = selectedSource === 'All'
+  //  ? data
+  //  : data.filter(item => item.source === selectedSource);
+  const filteredData = data
+  .filter(item => selectedSource === 'All' || item.source === selectedSource)
+  .filter(item => selectedDelivery === 'All' || item.delivery.includes(selectedDelivery));
+
+  let combinedData = [...filteredData]
+
+  if (sortBy === 'lowToHigh') {
+    combinedData.sort((a, b) => parseFloat(a.price.replace(/[$,]/g, '')) - parseFloat(b.price.replace(/[$,]/g, '')));
+  } else if (sortBy === 'highToLow') {
+    combinedData.sort((a, b) => parseFloat(b.price.replace(/[$,]/g, '')) - parseFloat(a.price.replace(/[$,]/g, '')));
+  }
+
+  function handleNextPhoto(index) {
+    // Assuming combinedData is your array of listings
+    const listing = combinedData[index];
+
+    // Increment the photo index
+    listing.photo_index = (listing.photo_index + 1) % listing.num_photos;
+
+    // Find the image element within the list item and update the src attribute
+    const listItem = document.querySelectorAll('li')[index];
+    const imageElement = listItem.querySelector('img');
+    imageElement.src = listing[`photo_url${listing.photo_index}`];
+
+    // You might also want to update the alt attribute of the image
+    imageElement.alt = `Photo ${listing.photo_index + 1}`;
+  }
     
 
   //Handle the error state
@@ -135,38 +167,6 @@ export default function Index() {
       </div>
       </div>
     );
-  }
-  
-  //Filter and sort functionality
-  //const filteredData = selectedSource === 'All'
-  //  ? data
-  //  : data.filter(item => item.source === selectedSource);
-  const filteredData = data
-  .filter(item => selectedSource === 'All' || item.source === selectedSource)
-  .filter(item => selectedDelivery === 'All' || item.delivery.includes(selectedDelivery));
-
-  let combinedData = [...filteredData]
-
-  if (sortBy === 'lowToHigh') {
-    combinedData.sort((a, b) => parseFloat(a.price.replace(/[$,]/g, '')) - parseFloat(b.price.replace(/[$,]/g, '')));
-  } else if (sortBy === 'highToLow') {
-    combinedData.sort((a, b) => parseFloat(b.price.replace(/[$,]/g, '')) - parseFloat(a.price.replace(/[$,]/g, '')));
-  }
-
-  function handleNextPhoto(index) {
-    // Assuming combinedData is your array of listings
-    const listing = combinedData[index];
-
-    // Increment the photo index
-    listing.photo_index = (listing.photo_index + 1) % listing.num_photos;
-
-    // Find the image element within the list item and update the src attribute
-    const listItem = document.querySelectorAll('li')[index];
-    const imageElement = listItem.querySelector('img');
-    imageElement.src = listing[`photo_url${listing.photo_index}`];
-
-    // You might also want to update the alt attribute of the image
-    imageElement.alt = `Photo ${listing.photo_index + 1}`;
   }
 
   return (    
