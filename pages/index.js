@@ -31,17 +31,6 @@ export default function Index() {
     //WHAT GOES HERE
   };
 
-  useLayoutEffect(() => {
-    // Scroll to the newly loaded content when it becomes available
-    console.log("useLayoutEffect triggered")
-    if (selectedData !== 'none') {
-      const targetElement = document.getElementById('newContent'); // Replace with your actual ID
-      if (targetElement) {
-        targetElement.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to the element
-      }
-    }
-  }, [selectedData]);
-
   //Handle the error state
   if (error) return <div>Failed to load</div>;
   // Check if data is not available yet or if no data source is selected
