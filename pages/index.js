@@ -60,7 +60,7 @@ export default function Index() {
               console.log("button clicked")
               setTimeout(() => {
                 contentRef.current.scrollIntoView({ behavior: 'smooth' });
-              }, "1000");
+              }, "500");
             }}
           />
           <img              
@@ -70,7 +70,7 @@ export default function Index() {
               setSelectedData('sept11_spaceagechair');
               setTimeout(() => {
                 contentRef.current.scrollIntoView({ behavior: 'smooth' });
-              }, "1000");
+              }, "500");
             }}
           />
         </div>
@@ -176,9 +176,7 @@ export default function Index() {
             alt="Image 1"
             onClick={() => {
               setSelectedData('sept11_noguchi');
-              setTimeout(() => {
-                contentRef.current.scrollIntoView({ behavior: 'smooth' });
-              }, "1000");
+              contentRef.current.scrollIntoView({ behavior: 'smooth' });
             }}
           />
           <img              
@@ -186,9 +184,7 @@ export default function Index() {
             alt="Image 2"
             onClick={() => {
               setSelectedData('sept11_spaceagechair');
-              setTimeout(() => {
-                contentRef.current.scrollIntoView({ behavior: 'smooth' });
-              }, "1000");
+              contentRef.current.scrollIntoView({ behavior: 'smooth' });
             }}
           />
         </div>
