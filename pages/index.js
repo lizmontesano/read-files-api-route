@@ -64,7 +64,7 @@ export default function Index() {
                 console.log("in setTimeout contentRef.current is: ")
                 console.log(contentRef.current)
                 contentRef.current.scrollIntoView({ behavior: 'smooth' });
-              }, "250");
+              }, "300");
             }}
           />
           <img              
