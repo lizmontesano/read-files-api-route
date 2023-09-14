@@ -10,7 +10,7 @@ export default function Index() {
   const [selectedSource, setSelectedSource] = useState('All'); 
   const [selectedData, setSelectedData] = useState('none');
   const [selectedDelivery, setSelectedDelivery] = useState('All');
-  const contentRef = useRef(startScrollHere);
+  const contentRef = useRef(null);
 
   //Set up SWR to run the fetcher function when calling "/api/staticdata"
   //There are 3 possible states: (1) loading when data is null (2) ready when the data is returned (3) error when there was an error fetching the data
@@ -59,7 +59,7 @@ export default function Index() {
               setSelectedData('sept11_noguchi');
               setTimeout(() => {
                 contentRef.current.scrollIntoView({ behavior: 'smooth' });
-              }, "500");
+              }, "300");
             }}
           />
           <img              
@@ -69,14 +69,10 @@ export default function Index() {
               setSelectedData('sept11_spaceagechair');
               setTimeout(() => {
                 contentRef.current.scrollIntoView({ behavior: 'smooth' });
-              }, "500");
+              }, "300");
             }}
           />
         </div>
-        <br></br>
-        <br></br>
-        <br></br>
-        <div ref={contentRef} id = "startScrollHere"></div>
       </div>
     );
   }
