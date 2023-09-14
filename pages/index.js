@@ -21,15 +21,11 @@ export default function Index() {
   );
     
   useEffect(() => {
+    console.log("use Effect triggered")
     if (isContentLoaded && newContentRef.current) {
       newContentRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   }, [isContentLoaded]);
-
-  // Function to load content and set isContentLoaded to true when content is ready
-  const loadContent = () => {
-    //WHAT GOES HERE
-  };
 
   //Handle the error state
   if (error) return <div>Failed to load</div>;
@@ -108,11 +104,6 @@ export default function Index() {
 
     // You might also want to update the alt attribute of the image
     imageElement.alt = `Photo ${listing.photo_index + 1}`;
-
-    // Update any other elements you want to change, such as the photo index display
-    // For example, you can update the displayed index: "Photo X of Y"
-    //const photoIndexDisplay = listItem.querySelector('.photo-index-display');
-    //photoIndexDisplay.textContent = `Photo ${listing.photo_index + 1} of ${listing.num_photos}`;
   }
 
   return (    
