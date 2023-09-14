@@ -286,7 +286,7 @@ export default function Index() {
               )}
             </div>
             <p>Price: {item.price}</p>
-            <p>Shipping: {item.delivery}</p>
+            <p>Deliver Method: {item.delivery}</p>
             <p>Returns: {item.returns}</p>
             <p>Source: {item.source}</p>
             <a className="listing-link" href={item.listing_url} target="_blank" rel="noopener noreferrer">View Listing</a>
