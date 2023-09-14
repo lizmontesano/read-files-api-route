@@ -10,7 +10,6 @@ export default function Index() {
   const [selectedSource, setSelectedSource] = useState('All'); 
   const [selectedData, setSelectedData] = useState('none');
   const [selectedDelivery, setSelectedDelivery] = useState('All');
-  const [scrollToContent, setScrollToContent] = useState(false);
   const contentRef = useRef(null);
 
   //Set up SWR to run the fetcher function when calling "/api/staticdata"
@@ -65,7 +64,9 @@ export default function Index() {
             alt="Image 1"
             onClick={() => {
               setSelectedData('sept11_noguchi');
-              setScrollToContent(true);
+              setTimeout(() => {
+                contentRef.current?.scrollIntoView({ behavior: 'smooth' });
+              }, "1000");
             }}
           />
           <img              
@@ -73,7 +74,7 @@ export default function Index() {
             alt="Image 2"
             onClick={() => {
               setSelectedData('sept11_spaceagechair');
-              setScrollToContent(true);
+              contentRef.current?.scrollIntoView({ behavior: 'smooth' });
             }}
           />
         </div>
@@ -179,7 +180,9 @@ export default function Index() {
             alt="Image 1"
             onClick={() => {
               setSelectedData('sept11_noguchi');
-              setScrollToContent(true);
+              setTimeout(() => {
+                contentRef.current?.scrollIntoView({ behavior: 'smooth' });
+              }, "1000");
             }}
           />
           <img              
@@ -187,7 +190,7 @@ export default function Index() {
             alt="Image 2"
             onClick={() => {
               setSelectedData('sept11_spaceagechair');
-              setScrollToContent(true);
+              contentRef.current?.scrollIntoView({ behavior: 'smooth' });
             }}
           />
         </div>
