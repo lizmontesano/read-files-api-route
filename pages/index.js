@@ -22,6 +22,7 @@ export default function Index() {
   );
 
   useEffect(() => {
+    console.log("useEffect triggered")
     if (scrollToContent && contentRef.current) {
       contentRef.current.scrollIntoView({ behavior: 'smooth' });
     }
