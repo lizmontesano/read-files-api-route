@@ -17,15 +17,8 @@ export default function Index() {
   const { data, error } = useSWR(
     selectedData !== 'none' ? `/api/staticdata?selectedData=${selectedData}` : null,
     fetcher
-  );  
-
-  // useEffect(() => {
-  //   console.log("useEffect triggered")
-  //   console.log(contentRef.current)
-  //   if (scrollToContent && contentRef.current) {
-  //     contentRef.current.scrollIntoView({ behavior: 'smooth' });
-  //   }
-  // }, [scrollToContent]);
+  );
+    
 
   //Handle the error state
   if (error) return <div>Failed to load</div>;
@@ -64,8 +57,9 @@ export default function Index() {
             alt="Image 1"
             onClick={() => {
               setSelectedData('sept11_noguchi');
+              console.log("button clicked")
               setTimeout(() => {
-                contentRef.current?.scrollIntoView({ behavior: 'smooth' });
+                contentRef.current.scrollIntoView({ behavior: 'smooth' });
               }, "1000");
             }}
           />
@@ -74,7 +68,9 @@ export default function Index() {
             alt="Image 2"
             onClick={() => {
               setSelectedData('sept11_spaceagechair');
-              contentRef.current?.scrollIntoView({ behavior: 'smooth' });
+              setTimeout(() => {
+                contentRef.current.scrollIntoView({ behavior: 'smooth' });
+              }, "1000");
             }}
           />
         </div>
@@ -181,7 +177,7 @@ export default function Index() {
             onClick={() => {
               setSelectedData('sept11_noguchi');
               setTimeout(() => {
-                contentRef.current?.scrollIntoView({ behavior: 'smooth' });
+                contentRef.current.scrollIntoView({ behavior: 'smooth' });
               }, "1000");
             }}
           />
@@ -190,7 +186,9 @@ export default function Index() {
             alt="Image 2"
             onClick={() => {
               setSelectedData('sept11_spaceagechair');
-              contentRef.current?.scrollIntoView({ behavior: 'smooth' });
+              setTimeout(() => {
+                contentRef.current.scrollIntoView({ behavior: 'smooth' });
+              }, "1000");
             }}
           />
         </div>
