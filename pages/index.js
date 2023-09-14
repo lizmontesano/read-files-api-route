@@ -11,6 +11,8 @@ export default function Index() {
   const [selectedData, setSelectedData] = useState('none');
   const [selectedDelivery, setSelectedDelivery] = useState('All');
   const contentRef = useRef(null);
+  const [scrollToContent, setScrollToContent] = useState(false);
+
 
   //Set up SWR to run the fetcher function when calling "/api/staticdata"
   //There are 3 possible states: (1) loading when data is null (2) ready when the data is returned (3) error when there was an error fetching the data
@@ -18,6 +20,12 @@ export default function Index() {
     selectedData !== 'none' ? `/api/staticdata?selectedData=${selectedData}` : null,
     fetcher
   );
+
+  useEffect(() => {
+    if (scrollToContent && contentRef.current) {
+      contentRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [scrollToContent]);
     
 
   //Handle the error state
@@ -57,7 +65,7 @@ export default function Index() {
             alt="Image 1"
             onClick={() => {
               setSelectedData('sept11_noguchi');
-              contentRef.current?.scrollIntoView({ behavior: 'smooth' });
+              setScrollToContent(true);
             }}
           />
           <img              
@@ -65,7 +73,7 @@ export default function Index() {
             alt="Image 2"
             onClick={() => {
               setSelectedData('sept11_spaceagechair');
-              contentRef.current?.scrollIntoView({ behavior: 'smooth' });
+              setScrollToContent(true);
             }}
           />
         </div>
@@ -171,7 +179,7 @@ export default function Index() {
             alt="Image 1"
             onClick={() => {
               setSelectedData('sept11_noguchi');
-              contentRef.current?.scrollIntoView({ behavior: 'smooth' });
+              setScrollToContent(true);
             }}
           />
           <img              
@@ -179,7 +187,7 @@ export default function Index() {
             alt="Image 2"
             onClick={() => {
               setSelectedData('sept11_spaceagechair');
-              contentRef.current?.scrollIntoView({ behavior: 'smooth' });
+              setScrollToContent(true);
             }}
           />
         </div>
