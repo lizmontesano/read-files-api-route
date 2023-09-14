@@ -18,15 +18,7 @@ export default function Index() {
   const { data, error } = useSWR(
     selectedData !== 'none' ? `/api/staticdata?selectedData=${selectedData}` : null,
     fetcher
-  );
-
-  useEffect(() => {
-    console.log("useEffect triggered")
-    if (scrollToContent && contentRef.current) {
-      contentRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  }, [scrollToContent]);
-    
+  );  
 
   //Handle the error state
   if (error) return <div>Failed to load</div>;
@@ -112,6 +104,13 @@ export default function Index() {
     // You might also want to update the alt attribute of the image
     imageElement.alt = `Photo ${listing.photo_index + 1}`;
   }
+
+  useEffect(() => {
+    console.log("useEffect triggered")
+    if (scrollToContent && contentRef.current) {
+      contentRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [scrollToContent]);
 
   return (    
     <div>
