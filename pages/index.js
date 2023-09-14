@@ -57,10 +57,9 @@ export default function Index() {
             alt="Image 1"
             onClick={() => {
               setSelectedData('sept11_noguchi');
-              console.log("button clicked")
               setTimeout(() => {
                 contentRef.current.scrollIntoView({ behavior: 'smooth' });
-              }, "500");
+              }, "250");
             }}
           />
           <img              
@@ -70,7 +69,7 @@ export default function Index() {
               setSelectedData('sept11_spaceagechair');
               setTimeout(() => {
                 contentRef.current.scrollIntoView({ behavior: 'smooth' });
-              }, "500");
+              }, "250");
             }}
           />
         </div>
