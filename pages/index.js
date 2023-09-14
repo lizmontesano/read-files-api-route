@@ -19,13 +19,13 @@ export default function Index() {
     fetcher
   );  
 
-  useEffect(() => {
-    console.log("useEffect triggered")
-    console.log(contentRef.current)
-    if (scrollToContent && contentRef.current) {
-      contentRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  }, [scrollToContent]);
+  // useEffect(() => {
+  //   console.log("useEffect triggered")
+  //   console.log(contentRef.current)
+  //   if (scrollToContent && contentRef.current) {
+  //     contentRef.current.scrollIntoView({ behavior: 'smooth' });
+  //   }
+  // }, [scrollToContent]);
 
   //Handle the error state
   if (error) return <div>Failed to load</div>;
