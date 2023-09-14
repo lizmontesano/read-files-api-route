@@ -57,7 +57,7 @@ export default function Index() {
             alt="Image 1"
             onClick={() => {
               setSelectedData('sept11_noguchi');
-              contentRef.current.scrollIntoView({ behavior: 'smooth' });
+              contentRef.current?.scrollIntoView({ behavior: 'smooth' });
             }}
           />
           <img              
@@ -65,7 +65,7 @@ export default function Index() {
             alt="Image 2"
             onClick={() => {
               setSelectedData('sept11_spaceagechair');
-              contentRef.current.scrollIntoView({ behavior: 'smooth' });
+              contentRef.current?.scrollIntoView({ behavior: 'smooth' });
             }}
           />
         </div>
@@ -171,7 +171,7 @@ export default function Index() {
             alt="Image 1"
             onClick={() => {
               setSelectedData('sept11_noguchi');
-              contentRef.current.scrollIntoView({ behavior: 'smooth' });
+              contentRef.current?.scrollIntoView({ behavior: 'smooth' });
             }}
           />
           <img              
@@ -179,7 +179,7 @@ export default function Index() {
             alt="Image 2"
             onClick={() => {
               setSelectedData('sept11_spaceagechair');
-              contentRef.current.scrollIntoView({ behavior: 'smooth' });
+              contentRef.current?.scrollIntoView({ behavior: 'smooth' });
             }}
           />
         </div>
