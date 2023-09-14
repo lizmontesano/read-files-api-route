@@ -51,18 +51,14 @@ export default function Index() {
         <br></br>
         <br></br>
         <h3>Already know what you&#39;re looking for? Search here:
-          <select 
-          onChange={(e) => {
-            setSelectedData(e.target.value);
+          <input type="text" id="item" name="item" placeholder="...">
+          </input>
+          <button onChange={(e) => {
+            setSelectedData('sept11_spaceagechair');
             setTimeout(() => {
               contentRef.current.scrollIntoView({ behavior: 'smooth' });
             }, "500");
-          }} >
-            <option value="none">Select</option>
-            <option value="sept11_noguchi">Noguchi Paper Lamp</option>
-            <option value="sept11_spaceagechair">Space Age Chair</option>
-            <option value="sept11_movingsale">~Moving Sales~</option>
-          </select>
+          }}>Search!</button>
         </h3>
         <h3>Want to get inspired? Click on an image below to shop pieces in that style.</h3>
         <div className="image-select">
@@ -255,6 +251,9 @@ export default function Index() {
             <option value="All">All</option>
             <option value="eBay">eBay</option>
             <option value="Facebook Marketplace">Facebook Marketplace</option>
+            <option value="Facebook Marketplace">Craiglist</option>
+            <option value="Facebook Marketplace">Remix Market</option>
+            <option value="Facebook Marketplace">Big Reuse</option>
           </select>
       </div>
       <div>
