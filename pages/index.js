@@ -10,7 +10,7 @@ export default function Index() {
   const [selectedSource, setSelectedSource] = useState('All'); 
   const [selectedData, setSelectedData] = useState('none');
   const [selectedDelivery, setSelectedDelivery] = useState('All');
-  const contentRef = useRef(document.getElementById('startScrollHere'));
+  const contentRef = useRef(startScrollHere);
 
   //Set up SWR to run the fetcher function when calling "/api/staticdata"
   //There are 3 possible states: (1) loading when data is null (2) ready when the data is returned (3) error when there was an error fetching the data
@@ -76,7 +76,7 @@ export default function Index() {
         <br></br>
         <br></br>
         <br></br>
-        <div id = "startScrollHere"></div>
+        <div ref={contentRef} id = "startScrollHere"></div>
       </div>
     );
   }
