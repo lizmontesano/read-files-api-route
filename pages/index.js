@@ -10,8 +10,7 @@ export default function Index() {
   const [selectedSource, setSelectedSource] = useState('All'); 
   const [selectedData, setSelectedData] = useState('none');
   const [selectedDelivery, setSelectedDelivery] = useState('All');
-  const [isContentLoaded, setIsContentLoaded] = useState(false); 
-  const newContentRef = useRef(); //Ref for the target element
+  const contentRef = useRef(null);
 
   //Set up SWR to run the fetcher function when calling "/api/staticdata"
   //There are 3 possible states: (1) loading when data is null (2) ready when the data is returned (3) error when there was an error fetching the data
@@ -20,12 +19,6 @@ export default function Index() {
     fetcher
   );
     
-  useEffect(() => {
-    console.log("use Effect triggered")
-    if (isContentLoaded && newContentRef.current) {
-      newContentRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  }, [isContentLoaded]);
 
   //Handle the error state
   if (error) return <div>Failed to load</div>;
@@ -62,12 +55,18 @@ export default function Index() {
           <img
             src="https://pbs.twimg.com/media/F53x9reWcAAPZUO?format=jpg&name=large"
             alt="Image 1"
-            onClick={() => setSelectedData('sept11_noguchi')}
+            onClick={() => {
+              setSelectedData('sept11_noguchi');
+              contentRef.current.scrollIntoView({ behavior: 'smooth' });
+            }}
           />
           <img              
             src="https://pbs.twimg.com/media/F51aW7DWwAAsVIk?format=jpg&name=large"
             alt="Image 2"
-            onClick={() => setSelectedData('sept11_spaceagechair')}
+            onClick={() => {
+              setSelectedData('sept11_spaceagechair');
+              contentRef.current.scrollIntoView({ behavior: 'smooth' });
+            }}
           />
         </div>
       </div>
@@ -170,17 +169,23 @@ export default function Index() {
           <img
             src="https://pbs.twimg.com/media/F53x9reWcAAPZUO?format=jpg&name=large"
             alt="Image 1"
-            onClick={() => setSelectedData('sept11_noguchi')}
+            onClick={() => {
+              setSelectedData('sept11_noguchi');
+              contentRef.current.scrollIntoView({ behavior: 'smooth' });
+            }}
           />
           <img              
             src="https://pbs.twimg.com/media/F51aW7DWwAAsVIk?format=jpg&name=large"
             alt="Image 2"
-            onClick={() => setSelectedData('sept11_spaceagechair')}
+            onClick={() => {
+              setSelectedData('sept11_spaceagechair');
+              contentRef.current.scrollIntoView({ behavior: 'smooth' });
+            }}
           />
         </div>
         <br></br>
         <br></br>
-        <div ref={newContentRef} id="newContent">
+        <div ref={contentRef} id="scrollToThisContent">
         <h3>Here are secondhand and vintage pieces featured in that photo.</h3>
         </div>
         <p>All results shown are within 50 miles of NYC and listed in the last 7 days.</p>
