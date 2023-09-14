@@ -217,7 +217,7 @@ export default function Index() {
             <option value="sept11_movingsale">~Moving Sales~</option>
           </select>
         </h3>
-        <h3>Click on an image to shop second hand and vintage furniture in that style.</h3>
+        <h3>Want to get inspired? Click on an image below to shop pieces in that style..</h3>
         <div className="image-select">
           <img
             src="https://pbs.twimg.com/media/F53x9reWcAAPZUO?format=jpg&name=large"
