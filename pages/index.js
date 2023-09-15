@@ -243,7 +243,7 @@ export default function Index() {
         <div ref={contentRef} id="scrollToThisContent">
         <h3>Here&#39;s what we found.</h3>
         </div>
-        <p>All results shown are within 50 miles of NYC and listed in the last 7 days.</p>
+        <p>All results shown are within 10 miles of 11206 and listed in the last 7 days.</p>
         <div>
         {/* <label>Sort by price:</label>
           <select onChange={(e) => setSortBy(e.target.value)}>
@@ -257,9 +257,6 @@ export default function Index() {
             <option value="All">All</option>
             <option value="eBay">eBay</option>
             <option value="Facebook Marketplace">Facebook Marketplace</option>
-            <option value="Facebook Marketplace">Craiglist</option>
-            <option value="Facebook Marketplace">Remix Market</option>
-            <option value="Facebook Marketplace">Big Reuse</option>
           </select>
       </div>
       <div>
