@@ -64,7 +64,7 @@ export default function Index() {
           }
 
           /* Style for the select dropdown */
-          select {
+          .select {
             flex: 2; /* Take up some space next to the header text */
             padding: 8px;
             border: none;
@@ -73,7 +73,7 @@ export default function Index() {
           }
 
           /* Style for the dropdown options */
-          option {
+          .option {
             background-color: #ffffff; /* Background color for options */
             color: #333; /* Text color for options */
           }
@@ -85,8 +85,8 @@ export default function Index() {
         <p><center>Find your interior design style and search multiple resale sites at once to find pieces you&#39;ll love.</center></p>
         <br></br>
         <br></br>
-        <div class="search-container">
-          <h3 class="search-header">Already know what you're looking for?</h3>
+        <div className="search-container">
+          <h3 className="search-header">Already know what you're looking for?</h3>
           <select
             onChange="(e) => {
               setSelectedData(e.target.value);
