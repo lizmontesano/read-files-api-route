@@ -42,6 +42,41 @@ export default function Index() {
             height: auto;
             cursor: pointer; /* Change the cursor to a pointer on hover */
           }
+
+          /* Style for the container */
+          .search-container {
+            display: flex;
+            align-items: center;
+            background-color: #f5f5f5; /* Background color for the search bar */
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 400px; /* Adjust as needed */
+            margin: 0 auto; /* Center the container */
+          }
+
+          /* Style for the header text */
+          .search-header {
+            margin: 0;
+            padding: 0;
+            flex: 1; /* Take up remaining space */
+            font-size: 18px;
+          }
+
+          /* Style for the select dropdown */
+          select {
+            flex: 2; /* Take up some space next to the header text */
+            padding: 8px;
+            border: none;
+            outline: none;
+            background-color: transparent; /* Make the dropdown background transparent */
+          }
+
+          /* Style for the dropdown options */
+          option {
+            background-color: #ffffff; /* Background color for options */
+            color: #333; /* Text color for options */
+          }
         `}
         </style>
 
@@ -50,21 +85,23 @@ export default function Index() {
         <p><center>Find your interior design style and search multiple resale sites at once to find pieces you&#39;ll love.</center></p>
         <br></br>
         <br></br>
-        <h3>Already know what you&#39;re looking for?
-          <select 
-            onChange={(e) => {
+        <div class="search-container">
+          <h3 class="search-header">Already know what you're looking for?</h3>
+          <select
+            onChange="(e) => {
               setSelectedData(e.target.value);
               setTimeout(() => {
                 contentRef.current.scrollIntoView({ behavior: 'smooth' });
-              }, "500");
-            }} >
-              <option value="none">Select</option>
-              <option value="sept15_bortoiachair">Bertoia Diamond Chair Replica</option>
-              <option value="sept15_metaldesk">White Metal Desk</option>
-              <option value="sept11_noguchi">Noguchi Paper Lamp</option>
-              <option value="sept11_spaceagechair">Space Age Chair</option>
+              }, 500);
+            }"
+          >
+            <option value="none">Select</option>
+            <option value="sept15_bortoiachair">Bertoia Diamond Chair Replica</option>
+            <option value="sept15_metaldesk">White Metal Desk</option>
+            <option value="sept11_noguchi">Noguchi Paper Lamp</option>
+            <option value="sept11_spaceagechair">Space Age Chair</option>
           </select>
-        </h3>
+        </div>
         <h3>Want to get inspired? Click on an image below to shop pieces in that style.</h3>
         <div className="image-select">
           <img
