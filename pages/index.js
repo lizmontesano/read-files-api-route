@@ -275,6 +275,7 @@ export default function Index() {
             <option value="Free local pick up from Forest Hills, NY">Pickup in Forest Hills, NY</option>
             <option value="Free local pick up from Inwood, NY">Pickup in Inwood, NY</option>
             <option value="Free local pick up from West Nyack, NY">Pickup in West Nyack, NY</option>
+            <option value="Free local pick up from Union City, NJ">Pickup in Union City, NJ</option>
             <option value="Shipping">Shipping</option>
           </select>
       </div>
