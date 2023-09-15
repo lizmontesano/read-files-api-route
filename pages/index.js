@@ -51,12 +51,18 @@ export default function Index() {
         <br></br>
         <br></br>
         <h3>Already know what you&#39;re looking for?
-          <select>
-            <option value="none">Select</option>
-            <option value="sept15_bortoiachair">Bertoia Diamond Chair Replica</option>
-            <option value="sept15_metaldesk">White Metal Desk</option>
-            <option value="sept11_noguchi">Noguchi Paper Lamp</option>
-            <option value="sept11_spaceagechair">Space Age Chair</option>
+          <select 
+            onChange={(e) => {
+              setSelectedData(e.target.value);
+              setTimeout(() => {
+                contentRef.current.scrollIntoView({ behavior: 'smooth' });
+              }, "500");
+            }} >
+              <option value="none">Select</option>
+              <option value="sept15_bortoiachair">Bertoia Diamond Chair Replica</option>
+              <option value="sept15_metaldesk">White Metal Desk</option>
+              <option value="sept11_noguchi">Noguchi Paper Lamp</option>
+              <option value="sept11_spaceagechair">Space Age Chair</option>
           </select>
         </h3>
         <h3>Want to get inspired? Click on an image below to shop pieces in that style.</h3>
@@ -199,14 +205,19 @@ export default function Index() {
         <br></br>
         <br></br>
         <h3>Already know what you&#39;re looking for?
-          <input type="text" id="item" name="item" placeholder="Search here">
-          </input>
-          <button onClick={(e) => {
-            setSelectedData('sept11_spaceagechair');
-            setTimeout(() => {
-              contentRef.current.scrollIntoView({ behavior: 'smooth' });
-            }, "500");
-          }}>Go!</button>
+          <select 
+            onChange={(e) => {
+              setSelectedData(e.target.value);
+              setTimeout(() => {
+                contentRef.current.scrollIntoView({ behavior: 'smooth' });
+              }, "500");
+            }} >
+              <option value="none">Select</option>
+              <option value="sept15_bortoiachair">Bertoia Diamond Chair Replica</option>
+              <option value="sept15_metaldesk">White Metal Desk</option>
+              <option value="sept11_noguchi">Noguchi Paper Lamp</option>
+              <option value="sept11_spaceagechair">Space Age Chair</option>
+          </select>
         </h3>
         <h3>Want to get inspired? Click on an image below to shop pieces in that style..</h3>
         <div className="image-select">
