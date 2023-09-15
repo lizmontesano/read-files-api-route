@@ -51,7 +51,7 @@ export default function Index() {
             padding: 10px;
             border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            max-width: 1000px; /* Adjust as needed */
+            max-width: 1300px; /* Adjust as needed */
             margin: 0 auto; /* Center the container */
           }
 
