@@ -86,7 +86,7 @@ export default function Index() {
         <br></br>
         <br></br>
         <div className="search-container">
-          <h3 className="search-header">Already know what you're looking for?</h3>
+          <h3 className="search-header">Already know what you&#39;re looking for?</h3>
           <select
             onChange="(e) => {
               setSelectedData(e.target.value);
