@@ -111,7 +111,6 @@ export default function Index() {
           </div>
         </div>
 
-        <h3>Want to get inspired? Click on an image below to shop pieces in that style.</h3>
         <div className="image-select">
           <img
             src="https://pbs.twimg.com/media/F53x9reWcAAPZUO?format=jpg&name=large"
