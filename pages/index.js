@@ -28,8 +28,6 @@ export default function Index() {
       <div>
         <style>
         {`
-          @import url(https://fonts.googleapis.com/css?family=Open+Sans);
-
           /* Style for the image select container */
           .image-select {
             display: flex;
@@ -62,7 +60,7 @@ export default function Index() {
             border: 3px solid #777; /* Dark grey border */
             border-right: none;
             padding: 5px;
-            height: 20px;
+            height: 36px;
             border-radius: 5px 0 0 5px;
             outline: none;
             color: #777; /* Dark grey text color */
@@ -109,7 +107,7 @@ export default function Index() {
               setTimeout(() => {
                 contentRef.current.scrollIntoView({ behavior: 'smooth' });
               }, "500");
-            }}><i className="fa fa-search"></i></button>
+            }}>Search</button>
           </div>
         </div>
 
