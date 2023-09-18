@@ -51,9 +51,6 @@ export default function Index() {
 
           .search {
             width: 100%;
-            position: relative;
-            display: flex;
-            align-items: flex-start;
           }
 
           .searchTerm {
