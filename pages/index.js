@@ -53,7 +53,6 @@ export default function Index() {
             width: 100%;
             position: relative;
             display: flex;
-            margin-bottom: 20px;
           }
 
           .searchTerm {
@@ -108,7 +107,7 @@ export default function Index() {
               setTimeout(() => {
                 contentRef.current.scrollIntoView({ behavior: 'smooth' });
               }, "500");
-            }}>Submit</button>
+            }}><i class="fa fa-search"></i></button>
           </div>
         </div>
 
