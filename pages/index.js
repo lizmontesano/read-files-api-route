@@ -28,6 +28,8 @@ export default function Index() {
       <div>
         <style>
         {`
+          @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
           /* Style for the image select container */
           .image-select {
             display: flex;
