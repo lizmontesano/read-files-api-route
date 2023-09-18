@@ -87,14 +87,13 @@ export default function Index() {
         <br></br>
         <div className="search-container">
           <h3 className="search-header">Already know what you&#39;re looking for?</h3>
-          <select
-            onChange="(e) => {
+          <select 
+            onChange={(e) => {
               setSelectedData(e.target.value);
               setTimeout(() => {
                 contentRef.current.scrollIntoView({ behavior: 'smooth' });
-              }, 500);
-            }"
-          >
+              }, "500");
+            }} >
             <option value="none">Select</option>
             <option value="sept15_bortoiachair">Bertoia Diamond Chair Replica</option>
             <option value="sept15_metaldesk">White Metal Desk</option>
