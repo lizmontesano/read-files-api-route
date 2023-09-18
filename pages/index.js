@@ -401,7 +401,7 @@ export default function Index() {
       <ul>
         <div className="item-container">
         {combinedData.map((item, index) => (
-          <div key={index} className="item">
+          <li key={index} className="item">
             <h3>{item.title}</h3>
             <div className="photo-container">
               <img
@@ -418,7 +418,7 @@ export default function Index() {
             {/* <p>Returns: {item.returns}</p> */}
             <p>Source: {item.source}</p>
             <a className="listing-link" href={item.listing_url} target="_blank" rel="noopener noreferrer">View Listing</a>
-          </div>
+          </li>
         ))}
         </div>
       </ul>
