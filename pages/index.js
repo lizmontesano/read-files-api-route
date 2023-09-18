@@ -60,9 +60,8 @@ export default function Index() {
             border: 3px solid #777; /* Dark grey border */
             border-right: none;
             padding: 5px;
-            height: 36px;
-            border-radius: 30px;
-            
+            height: 50px;
+            border-radius: 30px 0 0 30px;
             outline: none;
             color: #777; /* Dark grey text color */
           }
@@ -73,12 +72,12 @@ export default function Index() {
 
           .searchButton {
             width: 40px;
-            height: 36px;
+            height: 50px;
             border: 1px solid #777; /* Dark grey border */
             background: #777; /* Dark grey background */
             text-align: center;
             color: #fff; /* White text color */
-            border-radius: 30px;
+            border-radius: 0 30px 30px 0;
             cursor: pointer;
             font-size: 20px;
           }
