@@ -44,46 +44,47 @@ export default function Index() {
           }
 
           /* Style for the search bar */
-          body{
-            background: #f5f5f5;
+          body {
+            background: #f5f5f5; /* Light grey background */
             font-family: 'Open Sans', sans-serif;
           }
-          
+
           .search {
             width: 100%;
-            position: top;
+            position: relative;
             display: flex;
+            align-items: flex-start;
           }
-          
+
           .searchTerm {
             width: 100%;
-            border: 3px solid #00B4CC;
+            border: 3px solid #777; /* Dark grey border */
             border-right: none;
             padding: 5px;
             height: 20px;
             border-radius: 5px 0 0 5px;
             outline: none;
-            color: #9DBFAF;
+            color: #777; /* Dark grey text color */
           }
-          
-          .searchTerm:focus{
-            color: #00B4CC;
+
+          .searchTerm:focus {
+            color: #000; /* Black text color when focused */
           }
-          
+
           .searchButton {
             width: 40px;
             height: 36px;
-            border: 1px solid #00B4CC;
-            background: #00B4CC;
+            border: 1px solid #777; /* Dark grey border */
+            background: #777; /* Dark grey background */
             text-align: center;
-            color: #fff;
+            color: #fff; /* White text color */
             border-radius: 0 5px 5px 0;
             cursor: pointer;
             font-size: 20px;
           }
-          
-          /*Resize the wrap to see the search bar change!*/
-          .wrap{
+
+          /* Resize the wrap to see the search bar change! */
+          .wrap {
             width: 30%;
             position: absolute;
             top: 50%;
