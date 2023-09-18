@@ -38,7 +38,7 @@ export default function Index() {
       
           /* Style for each clickable image */
           .image-select img {
-            width: 300px; /* Adjust the width of each image as needed */
+            width: 400px; /* Adjust the width of each image as needed */
             height: auto;
             cursor: pointer; /* Change the cursor to a pointer on hover */
           }
@@ -202,7 +202,40 @@ export default function Index() {
   return (    
     <div>
       <style>
-        {`
+          {`
+          .listing-link {
+            color: blue;
+            text-decoration: underline;
+          }
+
+          /* Style for the photo container */
+          .photo-container {
+            display: flex;
+            align-items: center; /* Vertically center-align the button */
+          }
+
+          /* Style for the right arrow button */
+          .next-button {
+            background-color: grey; /* Change to your desired background color */
+            color: #fff; /* Change to your desired text color */
+            border: none;
+            border-radius: 50%;
+            width: 60px; /* Adjust the width and height as needed */
+            height: 60px;
+            font-size: 24px; /* Adjust the font size as needed */
+            cursor: pointer;
+            margin-left: -30px; /* Add some space between the image and button */
+          }
+
+          .next-button:hover {
+            background-color: dark grey; /* Change to your desired hover background color */
+          }
+
+          .photo-container img {
+            width: 35%; /* Adjust the width as needed */
+            height: auto;
+          }
+          
           /* Style for the image select container */
           .image-select {
             display: flex;
@@ -213,7 +246,7 @@ export default function Index() {
       
           /* Style for each clickable image */
           .image-select img {
-            width: 500px; /* Adjust the width of each image as needed */
+            width: 400px; /* Adjust the width of each image as needed */
             height: auto;
             cursor: pointer; /* Change the cursor to a pointer on hover */
           }
@@ -268,7 +301,7 @@ export default function Index() {
           }
         `}
         </style>
-        
+
         <h1>Relish</h1>
         <h1><center>Shop every NYC secondhand site.</center></h1>
         <br></br>
