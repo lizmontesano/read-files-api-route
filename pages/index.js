@@ -64,6 +64,7 @@ export default function Index() {
             border-radius: 30px 0 0 30px;
             outline: none;
             color: #777; /* Dark grey text color */
+            font-size: 15px;
           }
 
           .searchTerm:focus {
@@ -71,7 +72,7 @@ export default function Index() {
           }
 
           .searchButton {
-            width: 40px;
+            width: 50px;
             height: 50px;
             border: 1px solid #777; /* Dark grey border */
             background: #777; /* Dark grey background */
@@ -79,7 +80,7 @@ export default function Index() {
             color: #fff; /* White text color */
             border-radius: 0 30px 30px 0;
             cursor: pointer;
-            font-size: 20px;
+            font-size: 15px;
           }
 
           /* Resize the wrap to see the search bar change! */
