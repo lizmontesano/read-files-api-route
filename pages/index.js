@@ -51,6 +51,8 @@ export default function Index() {
 
           .search {
             width: 100%;
+            position: relative;
+            display: flex;
           }
 
           .searchTerm {
@@ -96,17 +98,19 @@ export default function Index() {
         <p><center>Find your interior design style and search multiple resale sites at once to find pieces you&#39;ll love.</center></p>
         <br></br>
         <br></br>
-        <div className="wrap"> 
+
+        <div className="wrap">
           <div className="search">
-          <input type="text" className="searchTerm"id="item" name="item" placeholder="Search here"></input>
-          <button className="searchButton" onClick={(e) => {
-            setSelectedData('sept11_spaceagechair');
-            setTimeout(() => {
-              contentRef.current.scrollIntoView({ behavior: 'smooth' });
-            }, "500");
-          }}>Submit</button>
+            <input type="text" className="searchTerm" id="item" name="item" placeholder="Search here"></input>
+            <button className="searchButton" onClick={(e) => {
+              setSelectedData('sept11_spaceagechair');
+              setTimeout(() => {
+                contentRef.current.scrollIntoView({ behavior: 'smooth' });
+              }, "500");
+            }}>Submit</button>
           </div>
         </div>
+
         <h3>Want to get inspired? Click on an image below to shop pieces in that style.</h3>
         <div className="image-select">
           <img
