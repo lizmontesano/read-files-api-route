@@ -141,6 +141,7 @@ export default function Index() {
             </div>
           </div>
         </div>
+
         <br></br>
         <br></br>
         <br></br>
@@ -266,11 +267,9 @@ export default function Index() {
             transform: translate(-50%, -50%);
           }
         `}
-        </style>
-
+        </style
         <h1>Relish</h1>
-        <h1><center>A used furniture and home decor shop curated just for you.</center></h1>
-        <p><center>Find your interior design style and search multiple resale sites at once to find pieces you&#39;ll love.</center></p>
+        <h1><center>Shop every NYC secondhand site.</center></h1>
         <br></br>
         <br></br>
 
@@ -278,33 +277,45 @@ export default function Index() {
           <div className="search">
             <input type="text" className="searchTerm" id="item" name="item" placeholder="Search 'bertoia chair' or 'paper lamp'"></input>
             <button className="searchButton" onClick={(e) => {
-              setSelectedData('sept11_spaceagechair');
+              setSelectedData('sept15_bortoiachair');
               setTimeout(() => {
                 contentRef.current.scrollIntoView({ behavior: 'smooth' });
               }, "500");
             }}>Go</button>
           </div>
         </div>
-
-        <h3>Want to get inspired? Click on an image below to shop pieces in that style..</h3>
-        <div className="image-select">
-          <img
-            src="https://pbs.twimg.com/media/F53x9reWcAAPZUO?format=jpg&name=large"
-            alt="Image 1"
-            onClick={() => {
-              setSelectedData('sept11_noguchi');
-              contentRef.current.scrollIntoView({ behavior: 'smooth' });
-            }}
-          />
-          <img              
-            src="https://pbs.twimg.com/media/F51aW7DWwAAsVIk?format=jpg&name=large"
-            alt="Image 2"
-            onClick={() => {
-              setSelectedData('sept11_spaceagechair');
-              contentRef.current.scrollIntoView({ behavior: 'smooth' });
-            }}
-          />
+        
+        <div> <h2>Trending Searches</h2>
+          <div className="image-select">
+            <div>
+              <p>Noguchi Paper Lamp</p>
+              <img
+                src="https://pbs.twimg.com/media/F53x9reWcAAPZUO?format=jpg&name=large"
+                alt="Image 1"
+                onClick={() => {
+                  setSelectedData('sept11_noguchi');
+                  setTimeout(() => {
+                    contentRef.current.scrollIntoView({ behavior: 'smooth' });
+                  }, "500");
+                }}
+              />
+            </div>
+            <div>
+              <p>Space Age Chair</p>
+              <img              
+                src="https://pbs.twimg.com/media/F51aW7DWwAAsVIk?format=jpg&name=large"
+                alt="Image 2"
+                onClick={() => {
+                  setSelectedData('sept11_spaceagechair');
+                  setTimeout(() => {
+                    contentRef.current.scrollIntoView({ behavior: 'smooth' });
+                  }, "500");
+                }}
+              />
+            </div>
+          </div>
         </div>
+
         <br></br>
         <br></br>
         <div ref={contentRef} id="scrollToThisContent">
