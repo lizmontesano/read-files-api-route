@@ -353,7 +353,7 @@ export default function Index() {
         <br></br>
         <br></br>
         <div ref={contentRef} id="scrollToThisContent">
-        <h2>Here&#39;s what we found.</h2>
+        <h2>Search Results</h2>
         </div>
         <p>All results shown are within 10 miles of 11206 and listed in the last 7 days.</p>
         <div>
