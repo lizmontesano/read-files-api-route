@@ -86,7 +86,7 @@ export default function Index() {
           /* Resize the wrap to see the search bar change! */
           .wrap {
             width: 30%;
-            position: absolute;
+            position: top;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
