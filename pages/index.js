@@ -232,7 +232,7 @@ export default function Index() {
           }
 
           .photo-container img {
-            width: 35%; /* Adjust the width as needed */
+            width: 50%; /* Adjust the width as needed */
             height: auto;
           }
 
