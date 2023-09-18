@@ -38,7 +38,7 @@ export default function Index() {
       
           /* Style for each clickable image */
           .image-select img {
-            width: 500px; /* Adjust the width of each image as needed */
+            width: 300px; /* Adjust the width of each image as needed */
             height: auto;
             cursor: pointer; /* Change the cursor to a pointer on hover */
           }
@@ -111,28 +111,30 @@ export default function Index() {
             }}>Go</button>
           </div>
         </div>
-
-        <div className="image-select">
-          <img
-            src="https://pbs.twimg.com/media/F53x9reWcAAPZUO?format=jpg&name=large"
-            alt="Image 1"
-            onClick={() => {
-              setSelectedData('sept11_noguchi');
-              setTimeout(() => {
-                contentRef.current.scrollIntoView({ behavior: 'smooth' });
-              }, "500");
-            }}
-          />
-          <img              
-            src="https://pbs.twimg.com/media/F51aW7DWwAAsVIk?format=jpg&name=large"
-            alt="Image 2"
-            onClick={() => {
-              setSelectedData('sept11_spaceagechair');
-              setTimeout(() => {
-                contentRef.current.scrollIntoView({ behavior: 'smooth' });
-              }, "500");
-            }}
-          />
+        
+        <div> <h2>Trending Searches</h2>
+          <div className="image-select">
+            <img
+              src="https://pbs.twimg.com/media/F53x9reWcAAPZUO?format=jpg&name=large"
+              alt="Image 1"
+              onClick={() => {
+                setSelectedData('sept11_noguchi');
+                setTimeout(() => {
+                  contentRef.current.scrollIntoView({ behavior: 'smooth' });
+                }, "500");
+              }}
+            />
+            <img              
+              src="https://pbs.twimg.com/media/F51aW7DWwAAsVIk?format=jpg&name=large"
+              alt="Image 2"
+              onClick={() => {
+                setSelectedData('sept11_spaceagechair');
+                setTimeout(() => {
+                  contentRef.current.scrollIntoView({ behavior: 'smooth' });
+                }, "500");
+              }}
+            />
+          </div>
         </div>
         <br></br>
         <br></br>
@@ -269,7 +271,7 @@ export default function Index() {
 
         <div className="wrap">
           <div className="search">
-            <input type="text" className="searchTerm" id="item" name="item" placeholder="Search"></input>
+            <input type="text" className="searchTerm" id="item" name="item" placeholder="Search 'bertoia chair' or 'paper lamp'"></input>
             <button className="searchButton" onClick={(e) => {
               setSelectedData('sept11_spaceagechair');
               setTimeout(() => {
