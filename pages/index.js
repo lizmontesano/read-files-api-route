@@ -267,7 +267,8 @@ export default function Index() {
             transform: translate(-50%, -50%);
           }
         `}
-        </style
+        </style>
+        
         <h1>Relish</h1>
         <h1><center>Shop every NYC secondhand site.</center></h1>
         <br></br>
