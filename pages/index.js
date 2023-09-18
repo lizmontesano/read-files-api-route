@@ -43,27 +43,15 @@ export default function Index() {
             cursor: pointer; /* Change the cursor to a pointer on hover */
           }
 
-          /* Style for the container */
-          .search-container {
-            display: flex;
-            align-items: center;
-            background-color: #f5f5f5; /* Background color for the search bar */
-            padding: 10px;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            max-width: 1300px; /* Adjust as needed */
-            margin: 0 auto; /* Center the container */
-          }
-
           /* Style for the search bar */
           body{
-            background: #f2f2f2;
+            background: #f5f5f5;
             font-family: 'Open Sans', sans-serif;
           }
           
           .search {
             width: 100%;
-            position: relative;
+            position: top;
             display: flex;
           }
           
