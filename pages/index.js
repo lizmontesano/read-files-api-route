@@ -102,9 +102,9 @@ export default function Index() {
 
         <div className="wrap">
           <div className="search">
-            <input type="text" className="searchTerm" id="item" name="item" placeholder="Search"></input>
+            <input type="text" className="searchTerm" id="item" name="item" placeholder="Search 'bertoia chair' or 'paper lamp'"></input>
             <button className="searchButton" onClick={(e) => {
-              setSelectedData('sept11_spaceagechair');
+              setSelectedData('sept15_bortoiachair');
               setTimeout(() => {
                 contentRef.current.scrollIntoView({ behavior: 'smooth' });
               }, "500");
@@ -278,7 +278,7 @@ export default function Index() {
             }}>Go</button>
           </div>
         </div>
-        
+
         <h3>Want to get inspired? Click on an image below to shop pieces in that style..</h3>
         <div className="image-select">
           <img
