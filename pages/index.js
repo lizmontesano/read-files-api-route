@@ -194,78 +194,91 @@ export default function Index() {
   return (    
     <div>
       <style>
-      {`
-        .listing-link {
-          color: blue;
-          text-decoration: underline;
-        }
+        {`
+          /* Style for the image select container */
+          .image-select {
+            display: flex;
+            flex-wrap: wrap; /* Wrap images to the next row */
+            justify-content: center; /* Center the images horizontally */
+            gap: 20px; /* Adjust the gap between images */
+          }
+      
+          /* Style for each clickable image */
+          .image-select img {
+            width: 500px; /* Adjust the width of each image as needed */
+            height: auto;
+            cursor: pointer; /* Change the cursor to a pointer on hover */
+          }
 
-        /* Style for the photo container */
-        .photo-container {
-          display: flex;
-          align-items: center; /* Vertically center-align the button */
-        }
+          /* Style for the search bar */
+          body {
+            background: #f5f5f5; /* Light grey background */
+            font-family: 'Open Sans', sans-serif;
+          }
 
-        /* Style for the right arrow button */
-        .next-button {
-          background-color: grey; /* Change to your desired background color */
-          color: #fff; /* Change to your desired text color */
-          border: none;
-          border-radius: 50%;
-          width: 60px; /* Adjust the width and height as needed */
-          height: 60px;
-          font-size: 24px; /* Adjust the font size as needed */
-          cursor: pointer;
-          margin-left: -30px; /* Add some space between the image and button */
-        }
+          .search {
+            width: 100%;
+            position: relative;
+            display: flex;
+          }
 
-        .next-button:hover {
-          background-color: dark grey; /* Change to your desired hover background color */
-        }
+          .searchTerm {
+            width: 100%;
+            border: 3px solid #777; /* Dark grey border */
+            border-right: none;
+            padding: 5px;
+            height: 50px;
+            border-radius: 30px 0 0 30px;
+            outline: none;
+            color: #777; /* Dark grey text color */
+            font-size: 15px;
+          }
 
-        .photo-container img {
-          width: 35%; /* Adjust the width as needed */
-          height: auto;
-        }
+          .searchTerm:focus {
+            color: #000; /* Black text color when focused */
+          }
 
-        /* Style for the image select container */
-        .image-select {
-          display: flex;
-          flex-wrap: wrap; /* Wrap images to the next row */
-          justify-content: center; /* Center the images horizontally */
-          gap: 20px; /* Adjust the gap between images */
-        }
-    
-        /* Style for each clickable image */
-        .image-select img {
-          width: 500px; /* Adjust the width of each image as needed */
-          height: auto;
-          cursor: pointer; /* Change the cursor to a pointer on hover */
-        }
-    
-      `}
-      </style>
-      <h1>Relish</h1>
+          .searchButton {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #777; /* Dark grey border */
+            background: #777; /* Dark grey background */
+            text-align: center;
+            color: #fff; /* White text color */
+            border-radius: 0 30px 30px 0;
+            cursor: pointer;
+            font-size: 15px;
+          }
+
+          /* Resize the wrap to see the search bar change! */
+          .wrap {
+            width: 60%;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        `}
+        </style>
+
+        <h1>Relish</h1>
         <h1><center>A used furniture and home decor shop curated just for you.</center></h1>
         <p><center>Find your interior design style and search multiple resale sites at once to find pieces you&#39;ll love.</center></p>
         <br></br>
         <br></br>
-        <div className="search-container">
-          <h3 className="search-header">Search</h3>
-          <select 
-            onChange={(e) => {
-              setSelectedData(e.target.value);
+
+        <div className="wrap">
+          <div className="search">
+            <input type="text" className="searchTerm" id="item" name="item" placeholder="Search"></input>
+            <button className="searchButton" onClick={(e) => {
+              setSelectedData('sept11_spaceagechair');
               setTimeout(() => {
                 contentRef.current.scrollIntoView({ behavior: 'smooth' });
               }, "500");
-            }} >
-            <option value="none">Select</option>
-            <option value="sept15_bortoiachair">Bertoia Diamond Chair Replica</option>
-            <option value="sept15_metaldesk">White Metal Desk</option>
-            <option value="sept11_noguchi">Noguchi Paper Lamp</option>
-            <option value="sept11_spaceagechair">Space Age Chair</option>
-          </select>
+            }}>Go</button>
+          </div>
         </div>
+        
         <h3>Want to get inspired? Click on an image below to shop pieces in that style..</h3>
         <div className="image-select">
           <img
