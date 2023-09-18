@@ -95,8 +95,7 @@ export default function Index() {
         </style>
 
         <h1>Relish</h1>
-        <h1><center>A used furniture and home decor shop curated just for you.</center></h1>
-        <p><center>Find your interior design style and search multiple resale sites at once to find pieces you&#39;ll love.</center></p>
+        <h1><center>Shop every NYC secondhand site.</center></h1>
         <br></br>
         <br></br>
 
