@@ -107,7 +107,7 @@ export default function Index() {
               setTimeout(() => {
                 contentRef.current.scrollIntoView({ behavior: 'smooth' });
               }, "500");
-            }}><i class="fa fa-search"></i></button>
+            }}><i className="fa fa-search"></i></button>
           </div>
         </div>
 
