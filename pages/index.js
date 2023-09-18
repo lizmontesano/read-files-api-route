@@ -55,27 +55,52 @@ export default function Index() {
             margin: 0 auto; /* Center the container */
           }
 
-          /* Style for the header text */
-          .search-header {
-            margin: 0;
-            padding: 0;
-            flex: 1; /* Take up remaining space */
-            font-size: 18px;
+          /* Style for the search bar */
+          body{
+            background: #f2f2f2;
+            font-family: 'Open Sans', sans-serif;
           }
-
-          /* Style for the select dropdown */
-          .select {
-            flex: 2; /* Take up some space next to the header text */
-            padding: 8px;
-            border: none;
+          
+          .search {
+            width: 100%;
+            position: relative;
+            display: flex;
+          }
+          
+          .searchTerm {
+            width: 100%;
+            border: 3px solid #00B4CC;
+            border-right: none;
+            padding: 5px;
+            height: 20px;
+            border-radius: 5px 0 0 5px;
             outline: none;
-            background-color: transparent; /* Make the dropdown background transparent */
+            color: #9DBFAF;
           }
-
-          /* Style for the dropdown options */
-          .option {
-            background-color: #ffffff; /* Background color for options */
-            color: #333; /* Text color for options */
+          
+          .searchTerm:focus{
+            color: #00B4CC;
+          }
+          
+          .searchButton {
+            width: 40px;
+            height: 36px;
+            border: 1px solid #00B4CC;
+            background: #00B4CC;
+            text-align: center;
+            color: #fff;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            font-size: 20px;
+          }
+          
+          /*Resize the wrap to see the search bar change!*/
+          .wrap{
+            width: 30%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
           }
         `}
         </style>
@@ -85,8 +110,8 @@ export default function Index() {
         <p><center>Find your interior design style and search multiple resale sites at once to find pieces you&#39;ll love.</center></p>
         <br></br>
         <br></br>
-        <div className="search-container">
-          <h3 className="search-header">Already know what you&#39;re looking for?</h3>
+        <div className="wrap">
+          <h3 className="search">Search</h3>
           <select 
             onChange={(e) => {
               setSelectedData(e.target.value);
@@ -240,7 +265,8 @@ export default function Index() {
         <p><center>Find your interior design style and search multiple resale sites at once to find pieces you&#39;ll love.</center></p>
         <br></br>
         <br></br>
-        <h3>Already know what you&#39;re looking for?
+        <div className="search-container">
+          <h3 className="search-header">Search</h3>
           <select 
             onChange={(e) => {
               setSelectedData(e.target.value);
@@ -248,13 +274,13 @@ export default function Index() {
                 contentRef.current.scrollIntoView({ behavior: 'smooth' });
               }, "500");
             }} >
-              <option value="none">Select</option>
-              <option value="sept15_bortoiachair">Bertoia Diamond Chair Replica</option>
-              <option value="sept15_metaldesk">White Metal Desk</option>
-              <option value="sept11_noguchi">Noguchi Paper Lamp</option>
-              <option value="sept11_spaceagechair">Space Age Chair</option>
+            <option value="none">Select</option>
+            <option value="sept15_bortoiachair">Bertoia Diamond Chair Replica</option>
+            <option value="sept15_metaldesk">White Metal Desk</option>
+            <option value="sept11_noguchi">Noguchi Paper Lamp</option>
+            <option value="sept11_spaceagechair">Space Age Chair</option>
           </select>
-        </h3>
+        </div>
         <h3>Want to get inspired? Click on an image below to shop pieces in that style..</h3>
         <div className="image-select">
           <img
