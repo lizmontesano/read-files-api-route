@@ -113,26 +113,32 @@ export default function Index() {
         
         <div> <h2>Trending Searches</h2>
           <div className="image-select">
-            <img
-              src="https://pbs.twimg.com/media/F53x9reWcAAPZUO?format=jpg&name=large"
-              alt="Image 1"
-              onClick={() => {
-                setSelectedData('sept11_noguchi');
-                setTimeout(() => {
-                  contentRef.current.scrollIntoView({ behavior: 'smooth' });
-                }, "500");
-              }}
-            />
-            <img              
-              src="https://pbs.twimg.com/media/F51aW7DWwAAsVIk?format=jpg&name=large"
-              alt="Image 2"
-              onClick={() => {
-                setSelectedData('sept11_spaceagechair');
-                setTimeout(() => {
-                  contentRef.current.scrollIntoView({ behavior: 'smooth' });
-                }, "500");
-              }}
-            />
+            <div>
+              <p>Noguchi Paper Lamp</p>
+              <img
+                src="https://pbs.twimg.com/media/F53x9reWcAAPZUO?format=jpg&name=large"
+                alt="Image 1"
+                onClick={() => {
+                  setSelectedData('sept11_noguchi');
+                  setTimeout(() => {
+                    contentRef.current.scrollIntoView({ behavior: 'smooth' });
+                  }, "500");
+                }}
+              />
+            </div>
+            <div>
+              <p>Space Age Chair</p>
+              <img              
+                src="https://pbs.twimg.com/media/F51aW7DWwAAsVIk?format=jpg&name=large"
+                alt="Image 2"
+                onClick={() => {
+                  setSelectedData('sept11_spaceagechair');
+                  setTimeout(() => {
+                    contentRef.current.scrollIntoView({ behavior: 'smooth' });
+                  }, "500");
+                }}
+              />
+            </div>
           </div>
         </div>
         <br></br>
