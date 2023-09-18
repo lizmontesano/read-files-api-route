@@ -53,6 +53,7 @@ export default function Index() {
             width: 100%;
             position: relative;
             display: flex;
+            margin-bottom: 20px;
           }
 
           .searchTerm {
