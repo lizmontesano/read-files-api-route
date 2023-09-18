@@ -61,7 +61,8 @@ export default function Index() {
             border-right: none;
             padding: 5px;
             height: 36px;
-            border-radius: 5px 0 0 5px;
+            border-radius: 30px;
+            
             outline: none;
             color: #777; /* Dark grey text color */
           }
@@ -77,7 +78,7 @@ export default function Index() {
             background: #777; /* Dark grey background */
             text-align: center;
             color: #fff; /* White text color */
-            border-radius: 0 5px 5px 0;
+            border-radius: 30px;
             cursor: pointer;
             font-size: 20px;
           }
@@ -101,13 +102,13 @@ export default function Index() {
 
         <div className="wrap">
           <div className="search">
-            <input type="text" className="searchTerm" id="item" name="item" placeholder="Search here"></input>
+            <input type="text" className="searchTerm" id="item" name="item" placeholder="Search"></input>
             <button className="searchButton" onClick={(e) => {
               setSelectedData('sept11_spaceagechair');
               setTimeout(() => {
                 contentRef.current.scrollIntoView({ behavior: 'smooth' });
               }, "500");
-            }}>Search</button>
+            }}>Go</button>
           </div>
         </div>
 
