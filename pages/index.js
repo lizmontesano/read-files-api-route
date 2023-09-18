@@ -235,7 +235,7 @@ export default function Index() {
             width: 35%; /* Adjust the width as needed */
             height: auto;
           }
-          
+
           /* Style for the image select container */
           .image-select {
             display: flex;
@@ -353,7 +353,7 @@ export default function Index() {
         <br></br>
         <br></br>
         <div ref={contentRef} id="scrollToThisContent">
-        <h3>Here&#39;s what we found.</h3>
+        <h2>Here&#39;s what we found.</h2>
         </div>
         <p>All results shown are within 10 miles of 11206 and listed in the last 7 days.</p>
         <div>
