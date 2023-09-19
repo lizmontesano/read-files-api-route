@@ -215,6 +215,8 @@ export default function Index() {
             overflow: hidden;
             align-items: center; /* Vertically center-align the button */
             position: relative;
+            display: flex;
+            justify-content: center;
           }
 
           .photo-container img {
