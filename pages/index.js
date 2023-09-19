@@ -211,8 +211,8 @@ export default function Index() {
           /* Style for the photo container */
           .photo-container {
             width: 500px;
-            height: 500 px;
-            display: flex;
+            height: 500px;
+            overflow: hidden;
             align-items: center; /* Vertically center-align the button */
             position: relative;
           }
