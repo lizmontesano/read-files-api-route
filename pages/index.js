@@ -235,7 +235,7 @@ export default function Index() {
             font-size: 24px; /* Adjust the font size as needed */
             cursor: pointer;
             position: absolute;
-            right: -30px;
+            right: 0px;
             top: 50%;
             transform: translateY(-50%);
           }
