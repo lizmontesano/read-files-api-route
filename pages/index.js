@@ -232,7 +232,10 @@ export default function Index() {
             height: 60px;
             font-size: 24px; /* Adjust the font size as needed */
             cursor: pointer;
-            margin-left: -30px; /* Add some space between the image and button */
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
           }
 
           .next-button:hover {
