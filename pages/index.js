@@ -210,8 +210,16 @@ export default function Index() {
 
           /* Style for the photo container */
           .photo-container {
+            width: 500px;
+            height: 500 px;
             display: flex;
             align-items: center; /* Vertically center-align the button */
+            position: relative;
+          }
+
+          .photo-container img {
+            width: 100%; /* Adjust the width as needed */
+            height: auto; /* Maintain aspect ratio */
           }
 
           /* Style for the right arrow button */
@@ -229,11 +237,6 @@ export default function Index() {
 
           .next-button:hover {
             background-color: dark grey; /* Change to your desired hover background color */
-          }
-
-          .photo-container img {
-            width: 100%; /* Adjust the width as needed */
-            height: auto;
           }
 
           /* Style for the image select container */
