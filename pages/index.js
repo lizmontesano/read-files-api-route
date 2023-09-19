@@ -208,19 +208,10 @@ export default function Index() {
             text-decoration: underline;
           }
 
-          
           /* Style for the photo container */
           .photo-container {
-            width: 200px; /* Set the desired width */
-            height: 200px; /* Set the desired height */
-            overflow: hidden; /* Hide any overflowing content (e.g., larger images) */
-            position: relative; /* Ensure proper positioning of the next-button */
-          }
-          
-          /* Optionally, you can style the images themselves for consistency */
-          .photo-container img {
-            width: 100%; /* Make the image fill the container */
-            height: auto; /* Maintain the aspect ratio */
+            display: flex;
+            align-items: center; /* Vertically center-align the button */
           }
 
           /* Style for the right arrow button */
@@ -238,6 +229,11 @@ export default function Index() {
 
           .next-button:hover {
             background-color: dark grey; /* Change to your desired hover background color */
+          }
+
+          .photo-container img {
+            width: 100%; /* Adjust the width as needed */
+            height: auto;
           }
 
           /* Style for the image select container */
