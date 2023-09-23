@@ -103,7 +103,7 @@ export default function Index() {
           <div className="search">
             <input type="text" className="searchTerm" id="item" name="item" placeholder="Search 'bertoia chair' or 'paper lamp'"></input>
             <button className="searchButton" onClick={(e) => {
-              setSelectedData('sept15_bortoiachair');
+              setSelectedData('sept22_bertoiachair');
               setTimeout(() => {
                 contentRef.current.scrollIntoView({ behavior: 'smooth' });
               }, "500");
@@ -326,7 +326,7 @@ export default function Index() {
           <div className="search">
             <input type="text" className="searchTerm" id="item" name="item" placeholder="Search 'bertoia chair' or 'paper lamp'"></input>
             <button className="searchButton" onClick={(e) => {
-              setSelectedData('sept15_bortoiachair');
+              setSelectedData('sept22_bertoiachair');
               setTimeout(() => {
                 contentRef.current.scrollIntoView({ behavior: 'smooth' });
               }, "500");
