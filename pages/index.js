@@ -111,7 +111,7 @@ export default function Index() {
           </div>
         </div> */}
         
-        <div> <h2>click a pic to shop</h2>
+        <div><h2><center>click a pic to shop</center></h2>
           <div className="image-select">
             <div>
               <p>bertoia chairs</p>
@@ -127,12 +127,12 @@ export default function Index() {
               />
             </div>
             <div>
-              <p>acyrlic tables + lamps</p>
+              <p>acrylic tables + lamps</p>
               <img              
                 src="https://i.pinimg.com/736x/f7/06/f6/f706f6bbc14c5b441a67b9344af08aa8.jpg"
                 alt="Image 2"
                 onClick={() => {
-                  setSelectedData('sept11_spaceagechair');
+                  setSelectedData('sept23_sidetablelamp');
                   setTimeout(() => {
                     contentRef.current.scrollIntoView({ behavior: 'smooth' });
                   }, "500");
@@ -334,7 +334,7 @@ export default function Index() {
           </div>
         </div> */}
         
-        <div> <h2>click a pic to shop</h2>
+        <div><h2><center>click a pic to shop</center></h2>
           <div className="image-select">
             <div>
               <p>bertoia chairs</p>
@@ -350,12 +350,12 @@ export default function Index() {
               />
             </div>
             <div>
-              <p>acyrlic tables + lamps</p>
+              <p>acrylic tables + lamps</p>
               <img              
                 src="https://i.pinimg.com/736x/f7/06/f6/f706f6bbc14c5b441a67b9344af08aa8.jpg"
                 alt="Image 2"
                 onClick={() => {
-                  setSelectedData('sept11_spaceagechair');
+                  setSelectedData('sept23_sidetablelamp');
                   setTimeout(() => {
                     contentRef.current.scrollIntoView({ behavior: 'smooth' });
                   }, "500");
