@@ -94,12 +94,12 @@ export default function Index() {
         `}
         </style>
 
-        <h1>Relish</h1>
-        <h1><center>Shop every NYC secondhand site.</center></h1>
+        <h1>fbmp gold</h1>
+        <h1><center>shop the best of facebook marketplace in nyc</center></h1>
         <br></br>
         <br></br>
 
-        <div className="wrap">
+        {/* <div className="wrap">
           <div className="search">
             <input type="text" className="searchTerm" id="item" name="item" placeholder="Search 'bertoia chair' or 'paper lamp'"></input>
             <button className="searchButton" onClick={(e) => {
@@ -109,17 +109,17 @@ export default function Index() {
               }, "500");
             }}>Go</button>
           </div>
-        </div>
+        </div> */}
         
-        <div> <h2>Trending Searches</h2>
+        <div> <h2>click a pic to shop</h2>
           <div className="image-select">
             <div>
-              <p>Noguchi Paper Lamp</p>
+              <p>bertoia chairs</p>
               <img
-                src="https://pbs.twimg.com/media/F53x9reWcAAPZUO?format=jpg&name=large"
+                src="https://i.pinimg.com/736x/a7/d6/aa/a7d6aa7c88b074b8a5e16035c88f896a.jpg"
                 alt="Image 1"
                 onClick={() => {
-                  setSelectedData('sept11_noguchi');
+                  setSelectedData('sept22_bertoiachair');
                   setTimeout(() => {
                     contentRef.current.scrollIntoView({ behavior: 'smooth' });
                   }, "500");
@@ -127,9 +127,9 @@ export default function Index() {
               />
             </div>
             <div>
-              <p>Space Age Chair</p>
+              <p>acyrlic tables + lamps</p>
               <img              
-                src="https://pbs.twimg.com/media/F51aW7DWwAAsVIk?format=jpg&name=large"
+                src="https://i.pinimg.com/736x/f7/06/f6/f706f6bbc14c5b441a67b9344af08aa8.jpg"
                 alt="Image 2"
                 onClick={() => {
                   setSelectedData('sept11_spaceagechair');
@@ -317,12 +317,12 @@ export default function Index() {
         `}
         </style>
 
-        <h1>Relish</h1>
-        <h1><center>Shop every NYC secondhand site.</center></h1>
+        <h1>fbmp gold</h1>
+        <h1><center>shop the best of facebook marketplace in nyc</center></h1>
         <br></br>
         <br></br>
 
-        <div className="wrap">
+        {/* <div className="wrap">
           <div className="search">
             <input type="text" className="searchTerm" id="item" name="item" placeholder="Search 'bertoia chair' or 'paper lamp'"></input>
             <button className="searchButton" onClick={(e) => {
@@ -332,17 +332,17 @@ export default function Index() {
               }, "500");
             }}>Go</button>
           </div>
-        </div>
+        </div> */}
         
-        <div> <h2>Trending Searches</h2>
+        <div> <h2>click a pic to shop</h2>
           <div className="image-select">
             <div>
-              <p>Noguchi Paper Lamp</p>
+              <p>bertoia chairs</p>
               <img
-                src="https://pbs.twimg.com/media/F53x9reWcAAPZUO?format=jpg&name=large"
+                src="https://i.pinimg.com/736x/a7/d6/aa/a7d6aa7c88b074b8a5e16035c88f896a.jpg"
                 alt="Image 1"
                 onClick={() => {
-                  setSelectedData('sept11_noguchi');
+                  setSelectedData('sept22_bertoiachair');
                   setTimeout(() => {
                     contentRef.current.scrollIntoView({ behavior: 'smooth' });
                   }, "500");
@@ -350,9 +350,9 @@ export default function Index() {
               />
             </div>
             <div>
-              <p>Space Age Chair</p>
+              <p>acyrlic tables + lamps</p>
               <img              
-                src="https://pbs.twimg.com/media/F51aW7DWwAAsVIk?format=jpg&name=large"
+                src="https://i.pinimg.com/736x/f7/06/f6/f706f6bbc14c5b441a67b9344af08aa8.jpg"
                 alt="Image 2"
                 onClick={() => {
                   setSelectedData('sept11_spaceagechair');
@@ -370,7 +370,7 @@ export default function Index() {
         <div ref={contentRef} id="scrollToThisContent">
         <h2>Search Results</h2>
         </div>
-        <p>All results shown are within 10 miles of 11206 and listed in the last 7 days.</p>
+        <p>All results shown are within 40 miles of nyc.</p>
         <div>
         {/* <label>Sort by price:</label>
           <select onChange={(e) => setSortBy(e.target.value)}>
@@ -378,7 +378,7 @@ export default function Index() {
             <option value="lowToHigh">Low to High</option>
             <option value="highToLow">High to Low</option>
           </select> */}
-      <div>
+      {/* <div>
         <label>Filter by source:</label>
           <select onChange={(e) => setSelectedSource(e.target.value)}>
             <option value="All">All</option>
@@ -405,7 +405,7 @@ export default function Index() {
             <option value="Free local pick up from Union City, NJ">Pickup in Union City, NJ</option>
             <option value="Shipping">Shipping</option>
           </select>
-      </div>
+      </div> */}
       <ul>
         <div className="item-container">
         {combinedData.map((item, index) => (
